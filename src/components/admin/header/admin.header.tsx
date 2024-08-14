@@ -9,6 +9,8 @@ import Badge from '@mui/material/Badge';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Link from 'next/link';
+import { Box } from '@mui/material';
+import { signOut, useSession } from 'next-auth/react';
 
 const drawerWidth: number = 240;
 interface AppBarProps extends MuiAppBarProps {
@@ -39,6 +41,9 @@ interface IProps {
 
 const AdminHeader = (props: IProps) => {
     const { open, toggleDrawer } = props;
+    const { data: session } = useSession();
+
+
     return (
         <AppBar position="absolute" open={open}>
             <Toolbar
@@ -69,11 +74,18 @@ const AdminHeader = (props: IProps) => {
                         LRD Manager
                     </Link>
                 </Typography>
-                <IconButton color="inherit">
-                    <Badge badgeContent={4} color="secondary">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "15px" }}>
+                    <IconButton color="inherit">
+                        <Badge badgeContent={4} color="secondary">
+                            <NotificationsIcon />
+                        </Badge>
+                    </IconButton>
+                    {session &&
+                        <Box onClick={() => signOut()}>
+                            Logout
+                        </Box>
+                    }
+                </Box>
             </Toolbar>
         </AppBar>
     )
