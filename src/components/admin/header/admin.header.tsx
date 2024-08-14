@@ -9,7 +9,7 @@ import Badge from '@mui/material/Badge';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Link from 'next/link';
-import { Box } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 import { signOut, useSession } from 'next-auth/react';
 
 const drawerWidth: number = 240;
@@ -42,7 +42,6 @@ interface IProps {
 const AdminHeader = (props: IProps) => {
     const { open, toggleDrawer } = props;
     const { data: session } = useSession();
-
 
     return (
         <AppBar position="absolute" open={open}>
@@ -81,9 +80,12 @@ const AdminHeader = (props: IProps) => {
                         </Badge>
                     </IconButton>
                     {session &&
-                        <Box onClick={() => signOut()}>
-                            Logout
-                        </Box>
+                        <>
+                            <Avatar>A</Avatar>
+                            <Box onClick={() => signOut()}>
+                                Logout
+                            </Box>
+                        </>
                     }
                 </Box>
             </Toolbar>

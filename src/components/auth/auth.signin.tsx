@@ -99,17 +99,17 @@ const AuthSignInPage = () => {
                             width: "100%"
                         }}>
 
-                            <Avatar sx={{ backgroundColor: "rgba(255, 187, 85, 0.3)" }}>
-                                <Image
-                                    src={'/images/logo_png.png'}
-                                    alt="lrd-logo"
-                                    width={70}
-                                    height={70}
-                                />
-                            </Avatar>
+                            {/* <Avatar sx={{ backgroundColor: "rgba(255, 187, 85, 0.3)" }}> */}
+                            <Image
+                                src={'/images/logo_png.png'}
+                                alt="lrd-logo"
+                                width={70}
+                                height={70}
+                            />
+                            {/* </Avatar> */}
 
-                            <Typography component="h1">
-                                Sign in
+                            <Typography component="h1" mt={"8px"} sx={{ cursor: "default" }}>
+                                Sign in to LRD Management
                             </Typography>
                         </Box>
 
@@ -166,7 +166,7 @@ const AuthSignInPage = () => {
                         >
                             Sign In
                         </Button>
-                        <Divider>Or using</Divider>
+                        {/* <Divider>Or using</Divider>
                         <Box
                             sx={{
                                 display: "flex",
@@ -199,7 +199,7 @@ const AuthSignInPage = () => {
 
                                 < GoogleIcon titleAccess="Login with Google" />
                             </Avatar>
-                        </Box>
+                        </Box> */}
                     </div>
                 </Grid>
             </Grid>
