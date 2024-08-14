@@ -1,20 +1,19 @@
-import { Paper } from "@mui/material";
+import { sendRequest } from "@/utils/api";
 
 
+const StaffPage = async () => {
 
-const AdminStaff = () => {
+    // const res = await sendRequest<IBackendRes<any>>({
+    //     url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/auth/refresh`,
+    //     method: "POST",
+    //     nextOption: {
+    //         next: { tag: ['get-list-staff'] }
+    //     }
+    // })
+
     return (
-        <Paper
-            sx={{
-                p: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                height: 240,
-            }}
-        >
-            Staff
-        </Paper>
+        <StaffPage />
     )
 }
 
-export default AdminStaff;
+export default StaffPage;
