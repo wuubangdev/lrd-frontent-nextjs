@@ -16,7 +16,7 @@ const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
                 overflow: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
-                padding: "30px 40px 0 40px"
+                padding: "25px 40px 0 40px"
             }}
         >
             <Toolbar />

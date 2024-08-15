@@ -9,46 +9,54 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { sendRequest } from '@/utils/api';
+import Modal from '@/components/modal/modal';
+import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
 
 interface Column {
-    id: 'name' | 'email' | 'gender' | 'position' | 'address';
+    id: 'id' | 'name' | 'email' | 'gender' | 'position';
     label: string;
     minWidth?: number;
-    align?: 'right';
-    format?: (value: number) => string;
+    align?: "right" | "left" | "center" | "inherit" | "justify" | undefined;
+    format?: (value: string | number) => JSX.Element;
 }
 
 const columns: readonly Column[] = [
     {
         id: 'name',
         label: 'Name',
-        // minWidth: 170
+        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'email',
         label: 'Email',
-        // minWidth: 100
+        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'gender',
         label: 'Gender',
-        // minWidth: 170,
-        // align: 'right',
-        // format: (value: number) => value.toLocaleString('en-US'),
+        align: 'center',
+        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'position',
         label: 'Position',
-        // minWidth: 170,
-        // align: 'right',
-        // format: (value: number) => value.toLocaleString('en-US'),
+        align: 'center',
+        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
     },
     {
-        id: 'address',
-        label: 'Address',
-        // minWidth: 170,
-        // align: 'right',
-        // format: (value: number) => value.toFixed(2),
+        id: 'id',
+        label: 'Action',
+        align: 'center',
+        format: (value: string | number) => {
+            return (
+                <Box sx={{ px: 2, display: 'flex', gap: "8px", borderLeft: "1px solid #ccc", justifyContent: "center", }}>
+                    <Modal buttonTitle='Show' color={"info"} variant={"outlined"} />
+                    <Modal buttonTitle='Update' color={"warning"} variant={"outlined"} />
+                    <Modal buttonTitle='Delete' color={"error"} variant={"outlined"} />
+                </Box>
+            )
+        },
     },
 ];
 
@@ -94,9 +102,9 @@ export default function AdminStaffTable() {
                                 <TableCell
                                     key={column.id}
                                     align={column.align}
-                                    style={{ minWidth: column.minWidth }}
+                                    style={{}}
                                 >
-                                    {column.label}
+                                    <Typography variant='inherit' fontWeight={"bold"}>{column.label}</Typography>
                                 </TableCell>
                             ))}
                         </TableRow>
@@ -106,12 +114,12 @@ export default function AdminStaffTable() {
                             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                             .map((staff) => {
                                 return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={`table-${staff.id}`}>
-                                        {columns.map((column) => {
+                                    <TableRow hover role="checkbox" tabIndex={-1} key={`table-row-${staff.id}`}>
+                                        {columns.map((column, index) => {
                                             const value = staff[column.id];
                                             return (
-                                                <TableCell key={column.id} align={column.align}>
-                                                    {column.format && typeof value === 'number'
+                                                <TableCell key={`table-cell-${staff.id}-${index}`} align={column.align}>
+                                                    {column.format
                                                         ? column.format(value)
                                                         : value}
                                                 </TableCell>
