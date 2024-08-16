@@ -1,7 +1,6 @@
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
-
 export async function POST(request: NextRequest) {
     const secret = request.nextUrl.searchParams.get("secret");
     const tag = request.nextUrl.searchParams.get("tag");
@@ -12,7 +11,6 @@ export async function POST(request: NextRequest) {
     if (!tag) {
         return NextResponse.json({ message: "Missing tag" }, { status: 400 });
     }
-
     revalidateTag(tag);
 
     return NextResponse.json({ revalidate: true, now: Date.now() });

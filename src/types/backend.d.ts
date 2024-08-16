@@ -69,7 +69,7 @@ declare global {
         position: string;
         office: string;
         civilServants: string;
-        yearExp: number,
+        yearExp: number | string,
         level: string;
         trainingProcess: string;
         workingProcess: string;

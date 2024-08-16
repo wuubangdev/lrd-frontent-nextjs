@@ -8,10 +8,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { sendRequest } from '@/utils/api';
-import Modal from '@/components/modal/modal';
 import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Modal from '@/components/modal/modal';
+import UpdateStaff from './update.staff';
 
 interface Column {
     id: 'id' | 'name' | 'email' | 'gender' | 'position';
@@ -50,48 +51,34 @@ const columns: readonly Column[] = [
         align: 'center',
         format: (value: string | number) => {
             return (
-                <Box sx={{ px: 2, display: 'flex', gap: "8px", borderLeft: "1px solid #ccc", justifyContent: "center", }}>
-                    <Modal buttonTitle='Show' color={"info"} variant={"outlined"} />
-                    <Modal buttonTitle='Update' color={"warning"} variant={"outlined"} />
-                    <Modal buttonTitle='Delete' color={"error"} variant={"outlined"} />
+                <Box sx={{ px: 2, display: 'flex', gap: "8px", borderLeft: "0px solid #ccc", justifyContent: "center", }}>
+                    {/* <Modal buttonTitle='Show' modalTitle='Show staff' color={"info"} variant={"outlined"}><UpdateStaff /></Modal> */}
+                    <Modal buttonTitle='Update' modalTitle='Update staff' color={"warning"} variant={"outlined"}><UpdateStaff staffId={value} /></Modal>
+                    {/* <Modal buttonTitle='Delete' modalTitle='Delete staff' color={"error"} variant={"outlined"}>103</Modal> */}
                 </Box>
             )
         },
     },
 ];
 
-export default function AdminStaffTable() {
+interface IProps {
+    listStaff: IStaff[] | undefined;
+}
+
+export default function AdminStaffTable(props: IProps) {
+    const { listStaff } = props;
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
-    const [listStaff, setListStaff] = React.useState<IStaff[]>()
-
-    React.useEffect(() => {
-        fetchData();
-    }, [listStaff])
-
-
     const handleChangePage = (event: unknown, newPage: number) => {
         setPage(newPage);
     };
+
 
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
 
-    const fetchData = async () => {
-        const res = await sendRequest<IModelPaginate<IStaff>>({
-            url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/staffs`,
-            method: "GET",
-            queryParams: {
-                page: 1,
-                size: 10,
-            }
-        })
-        if (res?.data && res.statusCode === 200) {
-            setListStaff(res.data.result);
-        }
-    }
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
             <TableContainer sx={{ maxHeight: "100%" }}>
@@ -110,7 +97,7 @@ export default function AdminStaffTable() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {listStaff && listStaff
+                        {listStaff ? listStaff
                             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                             .map((staff) => {
                                 return (
@@ -118,7 +105,7 @@ export default function AdminStaffTable() {
                                         {columns.map((column, index) => {
                                             const value = staff[column.id];
                                             return (
-                                                <TableCell key={`table-cell-${staff.id}-${index}`} align={column.align}>
+                                                <TableCell key={`table-cell-${staff.id}-${index}`} align={column.align} sx={{ py: 1.2, px: 2 }}>
                                                     {column.format
                                                         ? column.format(value)
                                                         : value}
@@ -127,7 +114,9 @@ export default function AdminStaffTable() {
                                         })}
                                     </TableRow>
                                 );
-                            })}
+                            }) :
+                            <TableRow><TableCell><CircularProgress /></TableCell></TableRow>
+                        }
                     </TableBody>
                 </Table>
             </TableContainer>

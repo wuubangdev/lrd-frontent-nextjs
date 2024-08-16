@@ -23,7 +23,7 @@ const SnackbarProvider = (props: IProps) => {
     return (
         <Snackbar
             open={open}
-            autoHideDuration={4000}
+            autoHideDuration={3000}
             onClose={handleClose}
             anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >
