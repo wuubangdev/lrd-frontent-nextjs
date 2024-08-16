@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@/components/modal/modal';
 import UpdateStaff from '@/components/admin/admin-staff/update.staff';
 import ShowStaff from '@/components/admin/admin-staff/show.staff';
+import DeleteStaff from '@/components/admin/admin-staff/delete.staff';
 
 interface Column {
     id: 'id' | 'name' | 'email' | 'gender' | 'position';
@@ -55,7 +56,7 @@ const columns: readonly Column[] = [
                 <Box sx={{ px: 2, display: 'flex', gap: "8px", borderLeft: "0px solid #ccc", justifyContent: "center", }}>
                     <Modal buttonTitle='Show' modalTitle='Show staff' color={"info"} variant={"outlined"}><ShowStaff staffId={value} /></Modal>
                     <Modal buttonTitle='Update' modalTitle='Update staff' color={"warning"} variant={"outlined"}><UpdateStaff staffId={value} /></Modal>
-                    {/* <Modal buttonTitle='Delete' modalTitle='Delete staff' color={"error"} variant={"outlined"}>103</Modal> */}
+                    <Modal buttonTitle='Delete' modalTitle='Delete staff' color={"error"} variant={"outlined"}><DeleteStaff staffId={value} /></Modal>
                 </Box>
             )
         },
