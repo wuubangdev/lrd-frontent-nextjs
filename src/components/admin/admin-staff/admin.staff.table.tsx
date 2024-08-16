@@ -12,7 +12,8 @@ import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Modal from '@/components/modal/modal';
-import UpdateStaff from './update.staff';
+import UpdateStaff from '@/components/admin/admin-staff/update.staff';
+import ShowStaff from '@/components/admin/admin-staff/show.staff';
 
 interface Column {
     id: 'id' | 'name' | 'email' | 'gender' | 'position';
@@ -52,7 +53,7 @@ const columns: readonly Column[] = [
         format: (value: string | number) => {
             return (
                 <Box sx={{ px: 2, display: 'flex', gap: "8px", borderLeft: "0px solid #ccc", justifyContent: "center", }}>
-                    {/* <Modal buttonTitle='Show' modalTitle='Show staff' color={"info"} variant={"outlined"}><UpdateStaff /></Modal> */}
+                    <Modal buttonTitle='Show' modalTitle='Show staff' color={"info"} variant={"outlined"}><ShowStaff staffId={value} /></Modal>
                     <Modal buttonTitle='Update' modalTitle='Update staff' color={"warning"} variant={"outlined"}><UpdateStaff staffId={value} /></Modal>
                     {/* <Modal buttonTitle='Delete' modalTitle='Delete staff' color={"error"} variant={"outlined"}>103</Modal> */}
                 </Box>

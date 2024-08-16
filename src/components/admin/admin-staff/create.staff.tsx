@@ -105,7 +105,11 @@ const CreateStaff = forwardRef<StaffHandle, CreateStaffProps>(({ setOpen }, ref)
     };
 
     return (
-        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form
+            ref={formRef}
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+        >
             <Stack spacing={2}>
                 <TextFieldElement name={'email'} label={'Email'} control={control} required fullWidth />
                 <TextFieldElement name={'name'} label={'Name'} control={control} required fullWidth />
