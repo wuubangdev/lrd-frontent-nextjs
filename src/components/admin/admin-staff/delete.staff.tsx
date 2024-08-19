@@ -99,7 +99,10 @@ const DeleteStaff = forwardRef<StaffHandle, DeleteStaffProps>((props: DeleteStaf
 
 
     return (
-        <Typography sx={{ color: "red" }}>Do you want to delete staff with id: {staffId}</Typography>
+        <div style={{ display: "flex" }}>
+            <Typography sx={{ color: "red" }}>Do you want to delete staff with id: </Typography> &nbsp;
+            <b>{staffId}</b>
+        </div>
     );
 });
 

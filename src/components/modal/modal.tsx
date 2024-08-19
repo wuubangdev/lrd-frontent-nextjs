@@ -40,11 +40,19 @@ const Modal: React.FC<ModalProps> = ({ buttonTitle, modalTitle, buttonIcon, colo
             <Dialog fullWidth open={open} onClose={handleClose} scroll={'paper'}>
                 <DialogTitle>{modalTitle}</DialogTitle>
                 <DialogContent dividers={true}>
-                    {React.cloneElement(children as React.ReactElement<any>, { ref: childRef, setOpen })}
+                    {buttonTitle !== "Show" ?
+                        React.cloneElement(children as React.ReactElement<any>, { ref: childRef, setOpen })
+                        :
+                        React.cloneElement(children as React.ReactElement<any>)
+                    }
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={() => setOpen(false)}>Cancel</Button>
-                    <Button onClick={handleSubmit}>Submit</Button>
+                    {buttonTitle !== "Show" ?
+                        <Button onClick={handleSubmit}>Submit</Button>
+                        :
+                        ""
+                    }
                 </DialogActions>
             </Dialog>
         </>

@@ -4,11 +4,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
+import SchoolIcon from '@mui/icons-material/School';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import BiotechIcon from '@mui/icons-material/Biotech';
 import Link from 'next/link';
 
 export const mainListItems = (
@@ -29,24 +29,30 @@ export const mainListItems = (
                 <ListItemText primary="Staff" />
             </ListItemButton>
         </Link>
-        <ListItemButton>
-            <ListItemIcon>
-                <PeopleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Customers" />
-        </ListItemButton>
-        <ListItemButton>
-            <ListItemIcon>
-                <BarChartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Reports" />
-        </ListItemButton>
-        <ListItemButton>
-            <ListItemIcon>
-                <LayersIcon />
-            </ListItemIcon>
-            <ListItemText primary="Integrations" />
-        </ListItemButton>
+        <Link href={'/admin/lab'} style={{ textDecoration: 'unset', color: "inherit" }}>
+            <ListItemButton>
+                <ListItemIcon>
+                    <BiotechIcon />
+                </ListItemIcon>
+                <ListItemText primary="Lab" />
+            </ListItemButton>
+        </Link>
+        <Link href={'/admin/academy'} style={{ textDecoration: 'unset', color: "inherit" }}>
+            <ListItemButton>
+                <ListItemIcon>
+                    <SchoolIcon />
+                </ListItemIcon>
+                <ListItemText primary="Academy" />
+            </ListItemButton>
+        </Link>
+        <Link href={'/admin/conference'} style={{ textDecoration: 'unset', color: "inherit" }}>
+            <ListItemButton>
+                <ListItemIcon>
+                    <Diversity3Icon />
+                </ListItemIcon>
+                <ListItemText primary="Conference" />
+            </ListItemButton>
+        </Link>
     </React.Fragment>
 );
 

@@ -12,15 +12,8 @@ export default function Breadcrumb() {
     return (
         <div role="presentation" onClick={handleClick}>
             <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" href="/">
-                    MUI
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    href="/material-ui/getting-started/installation/"
-                >
-                    Core
+                <Link underline="hover" color="inherit" href="/admin">
+                    Admin
                 </Link>
                 <Link
                     underline="hover"
@@ -28,7 +21,7 @@ export default function Breadcrumb() {
                     href="/material-ui/react-breadcrumbs/"
                     aria-current="page"
                 >
-                    Breadcrumbs
+                    Staff
                 </Link>
             </Breadcrumbs>
         </div>
