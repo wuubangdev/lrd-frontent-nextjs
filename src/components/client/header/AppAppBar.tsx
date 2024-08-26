@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from '@/components/client/header/ToggleColorMode';
 
 const logoStyle = {
-  width: '140px',
+  width: '50px',
   height: 'auto',
   cursor: 'pointer',
 };
@@ -88,51 +88,87 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
               }}
             >
               <img
-                src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                }
+                src={'/images/logo_png.png'}
                 style={logoStyle}
-                alt="logo of sitemark"
+                alt="logo of lrd"
               />
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Typography
+                variant='h5'
+                sx={{
+                  color: "#0A6946",
+                  p: "0 10px",
+                  cursor: "pointer"
+                }}
+              >
+                LRD
+              </Typography>
+              <Box
+                sx={{
+                  display: { xs: 'none', md: 'flex' }
+
+                }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    Features
+                  <Typography variant="body1" color="text.primary">
+                    Home
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('testimonials')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    Testimonials
+                  <Typography variant="body1" color="text.primary">
+                    Academy
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('highlights')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    Highlights
+                  <Typography variant="body1" color="text.primary">
+                    Laboratory
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('pricing')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    Pricing
+                  <Typography variant="body1" color="text.primary">
+                    Quantity
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('faq')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
-                    FAQ
+                  <Typography variant="body1" color="text.primary">
+                    Research
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection('faq')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body1" color="text.primary">
+                    Alumni
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection('faq')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body1" color="text.primary">
+                    Conference
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection('faq')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body1" color="text.primary">
+                    News
                   </Typography>
                 </MenuItem>
               </Box>
@@ -153,7 +189,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 href="/material-ui/getting-started/templates/sign-in/"
                 target="_blank"
               >
-                Sign in
+                More info
               </Button>
               <Button
                 color="primary"
@@ -163,7 +199,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 href="/material-ui/getting-started/templates/sign-up/"
                 target="_blank"
               >
-                Sign up
+                Contact us
               </Button>
             </Box>
             <Box sx={{ display: { sm: '', md: 'none' } }}>
