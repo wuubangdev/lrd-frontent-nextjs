@@ -9,38 +9,32 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import LayersIcon from '@mui/icons-material/Layers';
+import ForestIcon from '@mui/icons-material/Forest';
+import LandslideIcon from '@mui/icons-material/Landslide';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Geographic Information System (GIS) & Remote Sensing (RS)',
-    description:
-      'GIS is a computer system that analyzes and displays geographically referenced information...',
+    icon: <LandslideIcon />,
+    title: 'Land Evaluation, Land Use Planning and Real Estate',
+    imageLight: 'url("/images/intro/planning_light.png")',
+    imageDark: 'url("/images/intro/planning_dark.png")',
+  },
+  {
+    icon: <ForestIcon />,
+    title: 'Simulation and Forecast, Management of Land Resources',
+    imageLight: 'url("/images/intro/landr_light.png")',
+    imageDark: 'url("/images/intro/landr_dark.png")',
+  },
+  {
+    icon: <LayersIcon />,
+    title: 'GIS, Remote Sensing, Mapping and Surveying laboratory.',
     imageLight: 'url("/images/intro/rs_light.png")',
     imageDark: 'url("/images/intro/rs_dark.png")',
   },
-  {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Land-use Planing',
-    description:
-      'Land use planning or Land-use regulation is the process of regulating...',
-    imageLight: 'url("/images/intro/landuse.png")',
-    imageDark: 'url("/images/intro/landuse.png")',
-  },
-  {
-    icon: <DevicesRoundedIcon />,
-    title: 'Soil Science',
-    description:
-      'Soil science is the study of soil as a natural resource on the surface...',
-    imageLight: 'url("/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
-  },
 ];
 
-export default function Features() {
+export default function Introduction() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -51,12 +45,18 @@ export default function Features() {
 
   return (
     <Container id="features" sx={{ py: { xs: 4, sm: 8 } }}>
+      <Typography component="h2" variant="h4"
+        sx={{
+          fontWeight: 600,
+          color: (theme) =>
+            theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+        }}
+      >
+        Introduction
+      </Typography>
       <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
           <div>
-            <Typography component="h2" variant="h4" color="text.primary">
-              Introduction
-            </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
@@ -65,10 +65,35 @@ export default function Features() {
                 textAlign: "justify"
               }}
             >
-              Department of Land Resources (DLR) was founded in 2010 of the College of Environment and Natural Resources.
-              DLR focuses on teaching, training, conducting scientific research and transferring technology to advance socio-economic development of the Mekong Delta region.
+              Department of Soil Science and Land Management, College of Agriculture and Applied Biology was the precursor of Land Resources Department, established in 1976.
+              Department of Land Resources (DLR) was founded in 2010 by splitting the former department and merged to the College of Environment and Natural Resources.
+              The faculty staffs have high education qualities, practical experiences and professional knowledge. DLR focuses on teaching, training, conducting scientific
+              research and transferring technology to advance socio-economic development of the Mekong Delta region.
             </Typography>
           </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Card
+            variant="outlined"
+            sx={{
+              height: '100%',
+              width: '100%',
+              pointerEvents: 'none',
+            }}
+          >
+            <Box
+              sx={{
+                m: 'auto',
+                width: "100%",
+                height: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: 'cover',
+                backgroundImage: 'url("/images/intro/khoamt.png")'
+              }}
+            />
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
             {items.map(({ title }, index) => (
               <Chip
@@ -119,9 +144,6 @@ export default function Features() {
               <Typography color="text.primary" variant="body2" fontWeight="bold">
                 {selectedFeature.title}
               </Typography>
-              <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
-                {selectedFeature.description}
-              </Typography>
               <Link
                 color="primary"
                 variant="body2"
@@ -149,7 +171,7 @@ export default function Features() {
             useFlexGap
             sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
           >
-            {items.map(({ icon, title, description }, index) => (
+            {items.map(({ icon, title }, index) => (
               <Card
                 key={index}
                 variant="outlined"
@@ -205,13 +227,6 @@ export default function Features() {
                       fontWeight="bold"
                     >
                       {title}
-                    </Typography>
-                    <Typography
-                      color="text.secondary"
-                      variant="body2"
-                      sx={{ my: 0.5 }}
-                    >
-                      {description}
                     </Typography>
                     <Link
                       color="primary"

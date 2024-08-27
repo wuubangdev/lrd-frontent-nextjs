@@ -1,4 +1,4 @@
-import type {} from '@mui/material/themeCssVarsAugmentation';
+import type { } from '@mui/material/themeCssVarsAugmentation';
 import { ThemeOptions, alpha } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import { PaletteMode } from '@mui/material';
@@ -17,7 +17,7 @@ declare module '@mui/material/styles/createPalette' {
     900: string;
   }
 
-  interface PaletteColor extends ColorRange {}
+  interface PaletteColor extends ColorRange { }
 }
 
 export const brand = {
@@ -184,12 +184,12 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontSize: 16,
     },
     body1: {
-      fontWeight: 400,
-      fontSize: 15,
+      fontWeight: 500,
+      fontSize: 18,
     },
     body2: {
       fontWeight: 400,
-      fontSize: 14,
+      fontSize: 16,
     },
     caption: {
       fontWeight: 400,
@@ -315,17 +315,17 @@ export default function getLPTheme(mode: PaletteMode): ThemeOptions {
             }),
             ...(ownerState.variant === 'contained' &&
               ownerState.color === 'primary' && {
-                color: brand[50],
-                background: brand[500],
-                backgroundImage: `linear-gradient(to bottom, ${brand[400]}, ${brand[600]})`,
-                boxShadow: `inset 0 1px ${alpha(brand[300], 0.4)}`,
-                outline: `1px solid ${brand[700]}`,
-                '&:hover': {
-                  background: brand[400],
-                  backgroundImage: 'none',
-                  boxShadow: `0 0 0 1px  ${alpha(brand[300], 0.5)}`,
-                },
-              }),
+              color: brand[50],
+              background: brand[500],
+              backgroundImage: `linear-gradient(to bottom, ${brand[400]}, ${brand[600]})`,
+              boxShadow: `inset 0 1px ${alpha(brand[300], 0.4)}`,
+              outline: `1px solid ${brand[700]}`,
+              '&:hover': {
+                background: brand[400],
+                backgroundImage: 'none',
+                boxShadow: `0 0 0 1px  ${alpha(brand[300], 0.5)}`,
+              },
+            }),
             ...(ownerState.variant === 'outlined' && {
               backgroundColor: alpha(brand[300], 0.1),
               borderColor: brand[300],

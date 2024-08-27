@@ -6,10 +6,10 @@ import Hero from '@/components/client/hero/hero';
 import LogoCollection from '@/components/client/example/LogoCollection';
 import Highlights from '@/components/client/example/Highlights';
 import Pricing from '@/components/client/example/Pricing';
-import Features from '@/components/client/example/Features';
 import Testimonials from '@/components/client/example/Testimonials';
 import FAQ from '@/components/client/example/FAQ';
 import Footer from '@/components/client/footer/Footer';
+import Introduction from '@/components/client/home/Introduction';
 
 export default function LandingPage() {
 
@@ -17,12 +17,12 @@ export default function LandingPage() {
     <>
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <LogoCollection />
-        <Features />
+        <Introduction />
         <Divider />
         <Testimonials />
         <Divider />
         <Highlights />
+        <LogoCollection />
         <Divider />
         <Pricing />
         <Divider />

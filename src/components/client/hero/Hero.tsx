@@ -11,7 +11,8 @@ import BrandStack from '@/components/client/hero/hero.brand.stack';
 
 export default function Hero() {
   const images = [
-    '/images/hero/VP-2823.jpg',
+    '/images/hero/hero-1.png',
+    '/images/hero/hero-2.png',
     '/images/hero/tuyensinh_qldd_2024.jpg',
   ];
 
@@ -59,17 +60,17 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          pt: { xs: 10, sm: 16 },
-          pb: { xs: 6, sm: 8 },
+          pt: { xs: 8, sm: 12 },
+          pb: { xs: 4, sm: 4 },
         }}
       >
         <BrandStack />
         <Box
           id="carousel"
           sx={{
-            mt: { xs: 8, sm: 10 },
+            mt: { xs: 4, sm: 6 },
             alignSelf: 'center',
-            height: { xs: 200, sm: 700 },
+            height: { xs: 200, sm: 600 },
             width: '100%',
             borderRadius: '10px',
             outline: '1px solid',
@@ -84,7 +85,7 @@ export default function Hero() {
                 key={index}
                 sx={{
                   position: "relative",
-                  height: { xs: 200, sm: 700 },
+                  height: { xs: 200, sm: 600 },
                 }}
               >
                 <Image
@@ -92,6 +93,9 @@ export default function Hero() {
                   src={image}
                   sizes='100%'
                   fill
+                // style={{
+                //   objectFit: 'contain',
+                // }}
                 />
               </Box>
             ))}

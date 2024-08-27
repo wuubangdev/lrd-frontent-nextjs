@@ -7,27 +7,26 @@ const BrandStack = () => {
     return (
         <>
             <Stack
-                spacing={2}
                 useFlexGap
                 sx={{
                     width: { xs: '100%', sm: '70%' },
                 }}
             >
                 <Typography
-                    variant="h5"
+                    variant="h6"
                     sx={{
                         display: 'flex',
                         flexDirection: { xs: 'column', md: 'row' },
                         alignSelf: 'center',
                         textAlign: 'center',
-                        fontSize: 'clamp(3rem, 10vw, 2rem)',
+                        fontSize: 'clamp(2.5rem, 10vw, 1.5rem)',
                     }}
                 >
                     <Typography
                         component="span"
-                        variant="h5"
+                        variant="h6"
                         sx={{
-                            fontSize: 'clamp(3rem, 10vw, 2rem)',
+                            fontSize: 'clamp(2.5rem, 10vw, 1.5rem)',
                             color: (theme) =>
                                 theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                         }}
@@ -60,7 +59,7 @@ const BrandStack = () => {
                 </Typography>
                 <Typography
                     textAlign="center"
-                    variant='h6'
+                    variant='h5'
                     color="text.secondary"
                     sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
                 >
