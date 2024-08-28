@@ -93,6 +93,37 @@ export default function Introduction() {
             />
           </Card>
         </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+
+          sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
+        >
+          <Card
+            variant="outlined"
+            sx={{
+              height: '100%',
+              width: '100%',
+              display: { xs: 'none', sm: 'flex' },
+              pointerEvents: 'none',
+            }}
+          >
+            <Box
+              sx={{
+                m: 'auto',
+                width: "100%",
+                height: "100%",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: 'cover',
+                backgroundImage: (theme) =>
+                  theme.palette.mode === 'light'
+                    ? items[selectedItemIndex].imageLight
+                    : items[selectedItemIndex].imageDark,
+              }}
+            />
+          </Card>
+        </Grid>
         <Grid item xs={12} md={6}>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
             {items.map(({ title }, index) => (
@@ -138,6 +169,7 @@ export default function Introduction() {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: 280,
+                mb: 1.5
               }}
             />
             <Box sx={{ px: 2, pb: 2 }}>
@@ -253,36 +285,6 @@ export default function Introduction() {
               </Card>
             ))}
           </Stack>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
-        >
-          <Card
-            variant="outlined"
-            sx={{
-              height: '100%',
-              width: '100%',
-              display: { xs: 'none', sm: 'flex' },
-              pointerEvents: 'none',
-            }}
-          >
-            <Box
-              sx={{
-                m: 'auto',
-                width: "100%",
-                height: "100%",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: 'cover',
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
-              }}
-            />
-          </Card>
         </Grid>
       </Grid>
     </Container>
