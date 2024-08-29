@@ -1,6 +1,12 @@
-import { Breadcrumbs, Container, Link } from "@mui/material";
+import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
+import StaffHead from "@/components/client/client-staff/staff.head";
+import { Container, Typography } from "@mui/material";
 
 const ClientStaff = () => {
+    const breadcrumb = [
+        { title: "LRD", link: "/" },
+        { title: "Staffs", link: "/staff" },
+    ]
     return (
         <Container
             sx={{
@@ -12,7 +18,11 @@ const ClientStaff = () => {
                 height: "100vh"
             }}
         >
-            Client Staff
+            <Breadcrumb
+                breadcrumb={breadcrumb}
+            />
+            <Typography variant="h5">Staffs off lrd</Typography>
+            <StaffHead />
         </Container>
     )
 }
