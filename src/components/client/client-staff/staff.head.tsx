@@ -52,8 +52,7 @@ export default function StaffHead() {
     <Container
       id="staff-head"
       sx={{
-        pt: { xs: 6, sm: 14 },
-        pb: { xs: 8, sm: 16 },
+        pb: { xs: 3, sm: 3 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -64,11 +63,20 @@ export default function StaffHead() {
       <Box
         sx={{
           width: { sm: '100%', md: '100%' },
-          textAlign: "left",
+          textAlign: "center",
         }}
       >
-        <Typography component="h4" variant="h5" color="text.primary">
+        <Typography component="h4" variant="h4" color="text.primary"
+          sx={{
+            fontSize: "20px",
+            fontWeight: 600,
+            color: (theme) => theme.palette.mode === "light" ? "#0263B6" : ""
+          }}
+        >
           Department's management board
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          About a head and two deputy head of department
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -93,6 +101,10 @@ export default function StaffHead() {
                   head.title === 'Head of department'
                     ? 'linear-gradient(#033363, #021F3B)'
                     : undefined,
+                cursor: "pointer",
+                ":hover": {
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                }
               }}
             >
               <CardContent>

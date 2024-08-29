@@ -1,6 +1,6 @@
 'use client'
 import * as React from 'react';
-import { PaletteMode } from '@mui/material';
+import { Divider, PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import AppAppBar from '@/components/client/header/AppAppBar';
@@ -23,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <CssBaseline />
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
             {children}
+            <Divider />
             <Footer />
         </ThemeProvider>
     );

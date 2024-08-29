@@ -31,7 +31,7 @@ export default function LandingPage() {
         <AskQuestion />
         <Divider />
         <AUN />
-        <Divider />
+        {/* <Divider /> */}
       </Box>
     </>
   );
