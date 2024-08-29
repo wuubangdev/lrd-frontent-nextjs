@@ -8,35 +8,49 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 import { CardMedia, Tooltip } from '@mui/material';
+import ModalAdmission from './modal/modal.admission';
 
 const admissions = [
   {
     title: 'Land Management',
-    occupation: 'University',
+    type: 'University',
+    image: "/images/admission/dh_qldd.jpg",
     description:
       "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable."
   },
   {
     title: 'Regional and Urban Planning',
-    occupation: 'University',
+    type: 'University',
+    image: "/images/admission/dh_quyhoach.jpg",
     description:
       "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
   },
   {
     title: 'Master of Land Management',
-    occupation: 'Graduate Admissions',
+    type: 'Graduate Admissions',
+    image: "/images/admission/ths_qldd.jpg",
     description:
       "Learners are highly trained, have solid expertise in state administrative management of land, engineering - technology, management - exploitation and sustainable development of practical issues related to the field of land resources and land management."
   },
   {
     title: 'Doctor of Land Management',
-    occupation: 'Graduate Admissions',
+    type: 'Graduate Admissions',
+    image: "/images/admission/ts_qldd.jpg",
     description:
       "Learners are trained in in-depth knowledge of land management, undertake the task of management, teaching and scientific research, and apply it effectively in practice."
   },
 ];
 
+export interface IModalAdmissionData {
+  title: string;
+  image: string;
+}
+
 export default function Admission() {
+
+  const [open, setOpen] = React.useState(false);
+  const [modalData, setModalData] = React.useState<IModalAdmissionData | null>(null);
+
   return (
     <Box
       sx={{
@@ -102,28 +116,44 @@ export default function Admission() {
                   title="image-admisssion"
                 />
                 <Link href={"#"} style={{ textDecoration: "unset", color: "black" }}>
-                  <Tooltip title="Please click here to show more info!" placement="top-start">
-                    <div>
-                      <CardHeader
-                        title={admission.title}
-                        subheader={admission.occupation}
-                        sx={{
-                          pb: "4px",
-                          textAlign: "center"
-                        }}
-                      />
-                    </div>
-                  </Tooltip>
+                  <div>
+                    <CardHeader
+                      title={admission.title}
+                      subheader={admission.type}
+                      sx={{
+                        pb: "4px",
+                        textAlign: "center"
+                      }}
+                    />
+                  </div>
                 </Link>
-                <CardContent sx={{ pt: "4px" }}>
-                  <Typography variant="body2" color="text.secondary" textAlign="justify">
-                    {admission.description}
-                  </Typography>
+                <CardContent sx={{ pt: "4px", cursor: "pointer" }}>
+                  <Tooltip title="Please click here to show more info!" placement="bottom-end">
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      textAlign="justify"
+                      onClick={() => {
+                        setOpen(true);
+                        setModalData({
+                          image: admission.image,
+                          title: admission.title
+                        })
+                      }}
+                    >
+                      {admission.description}
+                    </Typography>
+                  </Tooltip>
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
+        <ModalAdmission
+          modalData={modalData}
+          open={open}
+          setOpen={setOpen}
+        />
       </Container>
     </Box>
   );

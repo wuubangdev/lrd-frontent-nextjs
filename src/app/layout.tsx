@@ -3,6 +3,7 @@ import ThemeRegistry from '@/components/theme-registry/theme.registry';
 import { ToastContextProvider } from '@/lib/toast.info.wrapper';
 import NProgressWrapper from '@/lib/next.nprogress';
 import NextAuthWrapper from '@/lib/next.auth.wrapper';
+import "@/app/layout.css";
 
 export const metadata = {
   title: 'Home Page',
