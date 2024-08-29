@@ -7,28 +7,31 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
-import { CardMedia, Tooltip } from '@mui/material';
+import { CardMedia, Divider, Tooltip } from '@mui/material';
 import ModalAdmission from './modal/modal.admission';
 
 const admissions = [
   {
-    title: 'Land Management',
+    title: 'Land Management - AUN-QA Standard',
     type: 'University',
     image: "/images/admission/dh_qldd.jpg",
+    image_card: "/images/admission/resize/dh_qldd.png",
     description:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable."
+      "Training engineers in state administrative management, engineering - technology, management - exploitation and sustainable development of practical issues related to land resources and land management."
   },
   {
     title: 'Regional and Urban Planning',
     type: 'University',
     image: "/images/admission/dh_quyhoach.jpg",
+    image_card: "/images/admission/resize/quyhoach.png",
     description:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
+      "Training engineers and learners to be trained in the ability to complete assigned tasks, be creative, have organizational skills, and work professionally in the field of regional planning, urban spatial planning and design to contribute to meeting human resources for the locality to serve the community."
   },
   {
     title: 'Master of Land Management',
     type: 'Graduate Admissions',
     image: "/images/admission/ths_qldd.jpg",
+    image_card: "/images/admission/resize/ths_qldd.png",
     description:
       "Learners are highly trained, have solid expertise in state administrative management of land, engineering - technology, management - exploitation and sustainable development of practical issues related to the field of land resources and land management."
   },
@@ -36,6 +39,7 @@ const admissions = [
     title: 'Doctor of Land Management',
     type: 'Graduate Admissions',
     image: "/images/admission/ts_qldd.jpg",
+    image_card: "/images/admission/resize/ts_qldd.png",
     description:
       "Learners are trained in in-depth knowledge of land management, undertake the task of management, teaching and scientific research, and apply it effectively in practice."
   },
@@ -111,8 +115,8 @@ export default function Admission() {
                 }}
               >
                 <CardMedia
-                  sx={{ height: 140 }}
-                  image="/images/academic/belm-8_o.jpg"
+                  sx={{ height: 180, width: "auto", borderRadius: "5px" }}
+                  image={admission.image_card}
                   title="image-admisssion"
                 />
                 <Link href={"#"} style={{ textDecoration: "unset", color: "black" }}>
@@ -130,7 +134,7 @@ export default function Admission() {
                 <CardContent sx={{ pt: "4px", cursor: "pointer" }}>
                   <Tooltip title="Please click here to show more info!" placement="bottom-end">
                     <Typography
-                      variant="body2"
+                      variant="body1"
                       color="text.secondary"
                       textAlign="justify"
                       onClick={() => {

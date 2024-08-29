@@ -47,8 +47,6 @@ const BrandStack = () => {
                                 1500,
                                 '',
                                 1500,
-
-
                             ]}
                             wrapper="span"
                             speed={50}

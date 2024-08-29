@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PaletteMode } from '@mui/material';
+import { Menu, PaletteMode } from '@mui/material';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from '@/components/client/header/ToggleColorMode';
+import { useRouter } from 'next/navigation';
 
 const logoStyle = {
   width: '50px',
@@ -24,6 +25,7 @@ interface AppAppBarProps {
 }
 
 function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+  const route = useRouter();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -108,7 +110,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
 
                 }}>
                 <MenuItem
-                  onClick={() => scrollToSection('features')}
+                  onClick={() => route.push('/')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body1" color="text.primary">
@@ -116,7 +118,15 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('testimonials')}
+                  onClick={() => route.push('/staff')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body1" color="text.primary">
+                    Staff
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => route.push('/')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body1" color="text.primary">

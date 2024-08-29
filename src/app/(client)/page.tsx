@@ -32,7 +32,6 @@ export default function LandingPage() {
         <Divider />
         <AUN />
         <Divider />
-        <Footer />
       </Box>
     </>
   );

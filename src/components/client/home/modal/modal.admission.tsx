@@ -3,12 +3,11 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import { IModalAdmissionData } from '../admission.info';
-import { Box, Card, CardMedia, IconButton } from '@mui/material';
+import { Card, CardMedia, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Transition = React.forwardRef(function Transition(
@@ -46,7 +45,7 @@ export default function ModalAdmission(props: IProps) {
                 maxWidth="md"
             >
                 <DialogTitle variant='h5' textAlign="center" color="#0263B6">
-                    ADMISSION INFO: <span style={{ color: "#B33435" }}> {modalData?.title.toUpperCase()}</span>
+                    {modalData?.title.toUpperCase()}
                 </DialogTitle>
                 <IconButton
                     edge="end"
