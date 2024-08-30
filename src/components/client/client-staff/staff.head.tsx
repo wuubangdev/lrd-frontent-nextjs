@@ -10,9 +10,12 @@ import Typography from '@mui/material/Typography';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import { Link } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { toSlugify } from '@/utils/global.hook';
 
 const heads = [
   {
+    id: 1,
     title: 'Deputy Head of department',
     avatar: "/images/avatar/avatar_male.png",
     name: 'Dr. Tran Thi A',
@@ -24,6 +27,7 @@ const heads = [
     ],
   },
   {
+    id: 1,
     title: 'Head of department',
     avatar: "/images/avatar/avatar_female_2.png",
     name: 'Assocc. Prof. Nguyen Van B',
@@ -35,6 +39,7 @@ const heads = [
     ],
   },
   {
+    id: 1,
     title: 'Deputy Head of department',
     avatar: "/images/avatar/avatar_female_1.png",
     name: 'Dr. Le Thanh C',
@@ -48,6 +53,7 @@ const heads = [
 ];
 
 export default function StaffHead() {
+  const route = useRouter();
   return (
     <>
       <Container
@@ -90,6 +96,7 @@ export default function StaffHead() {
               md={4}
             >
               <Card
+                onClick={() => route.push(`/staff/${toSlugify(head.name)}-${head.id}`)}
                 sx={{
                   p: 2,
                   display: 'flex',

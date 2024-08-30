@@ -1,13 +1,13 @@
 import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
-import StaffHead from "@/components/client/client-staff/staff.head";
-import SubStaff from "@/components/client/client-staff/staff.substaff";
-import ClientTableStaff from "@/components/client/client-staff/staff.table.client";
-import { Box, Divider } from "@mui/material";
+import StaffDetailHeader from "@/components/client/client-staff/client-staff-detail/staff.detail.header";
+import { Box } from "@mui/material";
 
-const ClientStaff = () => {
+
+const StaffDetails = () => {
     const breadcrumb = [
         { title: "LRD", link: "/" },
-        { title: "Staffs", link: "#" },
+        { title: "Staffs", link: "/staff" },
+        { title: "Staff details", link: "#" },
     ]
     return (
         <Box
@@ -26,11 +26,9 @@ const ClientStaff = () => {
                     breadcrumb={breadcrumb}
                 />
             </Box>
-            <StaffHead />
-            <SubStaff />
-            <ClientTableStaff />
+            <StaffDetailHeader />
         </Box>
     )
 }
 
-export default ClientStaff;
+export default StaffDetails;

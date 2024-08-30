@@ -11,81 +11,82 @@ import TableRow from '@mui/material/TableRow';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import { Box, Container, Link } from '@mui/material';
+import { toSlugify } from '@/utils/global.hook';
 
 interface Column {
-    id: 'id' | 'name' | 'title' | 'major' | 'email' | 'phone';
+    id: 'no' | 'nameId' | 'nameId' | 'title' | 'major' | 'email' | 'phone';
     label: string;
     minWidth?: string;
     align?: "right" | "left" | "center" | "inherit" | "justify" | undefined;
-    format?: (value: string | number) => JSX.Element;
+    format?: (value: any) => JSX.Element;
 }
 
 const columns: readonly Column[] = [
     {
-        id: 'id',
+        id: 'no',
         label: 'STT',
-        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
+        format: (value) => <Typography variant='inherit'>{value}</Typography>
     },
     {
-        id: 'name',
+        id: 'nameId',
         label: 'Name',
         minWidth: "180px",
         align: 'left',
-        format: (value: string | number) => <Link href={`/staff/example-staff-details`}>{value}</Link>
+        format: (value) => <Link href={`/staff/${toSlugify(value.name)}-${value.id}`}>{value.name}</Link>
     },
     {
         id: 'title',
         label: 'Title',
         align: 'left',
-        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
+        format: (value) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'major',
         label: 'Major',
         align: 'left',
-        format: (value: string | number) => <Typography variant='inherit'>{value}</Typography>
+        format: (value) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'email',
         label: 'Email',
         align: 'left',
-        format: (value: string | number) => <Link href={`mailto:${value}`}>{value}</Link>
+        format: (value) => <Link href={`mailto:${value}`}>{value}</Link>
     },
     {
         id: 'phone',
         label: 'Phone',
         align: 'right',
-        format: (value: string | number) => <Link href={`tel:${value}`}>{value}</Link>
+        format: (value) => <Link href={`tel:${value}`}>{value}</Link>
     },
 ];
 
 function createData(
-    id: number,
-    name: string,
+    no: number,
+    nameId: { id: number, name: string, },
     title: string,
     major: string,
     email: string,
     phone: string,
 ) {
-    return { id, name, title, major, email, phone };
+    return { no, nameId, title, major, email, phone };
 }
 
 const listStaff = [
-    createData(1, 'Pham Xuat Sac', "Associate professor, Head of department", "Land and Water Environment, Management of Land Resources", "abc@gmail.com", "0123456789"),
-    createData(2, 'Le Van Gioi', "Dr, Senior lecturer", "GIS, RS", "abc@gmail.com", "0123456789"),
-    createData(3, 'Nguyen Van Kha', "Dr, Senior lecturer", "Modelling, GIS and RS", "abc@gmail.com", "0123456789"),
-    createData(4, 'Ly Trung Binh', "Associate professor", "Aquaculture, Environmental Sciences, RS and GIS", "abc@gmail.com", "0123456789"),
-    createData(5, 'Nguyen Van B', "Associate professor", "Associate professor", "abc@gmail.com", "0123456789"),
-    createData(6, 'Tran Thi C', "Dr, Lecturer", "Land and Water Environment, Remote Sensing", "abc@gmail.com", "0123456789"),
-    createData(7, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(8, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(9, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(10, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(11, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(12, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(13, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(14, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
-    createData(15, 'Dao Hoang Kiem', "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(1, { id: 1, name: 'Pham Xuat Sac' }, "Associate professor, Head of department", "Land and Water Environment, Management of Land Resources", "abc@gmail.com", "0123456789"),
+    createData(2, { id: 2, name: 'Le Van Gioi' }, "Dr, Senior lecturer", "GIS, RS", "abc@gmail.com", "0123456789"),
+    createData(3, { id: 3, name: 'Nguyen Van Kha' }, "Dr, Senior lecturer", "Modelling, GIS and RS", "abc@gmail.com", "0123456789"),
+    createData(4, { id: 4, name: 'Ly Trung Binh' }, "Associate professor", "Aquaculture, Environmental Sciences, RS and GIS", "abc@gmail.com", "0123456789"),
+    createData(5, { id: 5, name: 'Nguyen Van B' }, "Associate professor", "Associate professor", "abc@gmail.com", "0123456789"),
+    createData(6, { id: 6, name: 'Tran Thi C' }, "Dr, Lecturer", "Land and Water Environment, Remote Sensing", "abc@gmail.com", "0123456789"),
+    createData(7, { id: 7, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(8, { id: 8, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(9, { id: 9, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(10, { id: 10, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(11, { id: 11, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(12, { id: 12, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(13, { id: 13, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(14, { id: 14, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
+    createData(15, { id: 15, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
 ]
 
 export default function ClientTableStaff() {
@@ -161,20 +162,20 @@ export default function ClientTableStaff() {
                             <TableBody>
                                 {listStaff ? listStaff
                                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                    .map((staff) => {
+                                    .map((staff, index) => {
                                         return (
-                                            <TableRow hover role="checkbox" tabIndex={-1} key={`table-row-${staff.id}`}>
+                                            <TableRow hover role="checkbox" tabIndex={-1} key={`table-row-${staff.nameId.id}-${index}`}>
                                                 {columns.map((column, index) => {
                                                     const value = staff[column.id];
                                                     return (
                                                         <TableCell
-                                                            key={`table-cell-${staff.id}-${index}`}
+                                                            key={`table-cell-${column.id}-${index}}`}
                                                             align={column.align}
                                                             sx={{ py: 1.2, px: 2, minWidth: `${column.minWidth}` }}
                                                         >
                                                             {column.format
                                                                 ? column.format(value)
-                                                                : value}
+                                                                : value.toString()}
                                                         </TableCell>
                                                     );
                                                 })}

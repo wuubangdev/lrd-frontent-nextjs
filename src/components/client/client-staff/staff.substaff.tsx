@@ -7,20 +7,25 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import { useRouter } from 'next/navigation';
+import { toSlugify } from '@/utils/global.hook';
 
 const departmentCell = [
   {
     avatar: <Avatar alt='pham-thi-m' src='/images/avatar/avatar_male.png' />,
+    id: 1,
     name: 'Pham Thi Mo',
     type: 'Secretary',
   },
   {
     avatar: <Avatar alt='pham-van-h' src='/images/avatar/avatar_female_2.png' />,
+    id: 1,
     name: 'Pham Van Huynh',
     type: 'Deputy Secretary ',
   },
   {
     avatar: <Avatar alt='le-van-d' src='/images/avatar/avatar_female_1.png' />,
+    id: 1,
     name: 'Le Van Dinh',
     type: 'Member',
 
@@ -29,17 +34,20 @@ const departmentCell = [
 const tradeUnion = [
   {
     avatar: <Avatar alt='pham-thi-m' src='/images/avatar/avatar_male.png' />,
+    id: 1,
     name: 'Tran Thanh Phong',
     type: 'Team Leader',
   },
   {
     avatar: <Avatar alt='pham-van-h' src='/images/avatar/avatar_female_2.png' />,
+    id: 1,
     name: 'Luc Thien Thinh',
     type: 'Vice President',
   },
 ];
 
 export default function SubStaff() {
+  const route = useRouter();
   return (
     <Container
       id="substaff"
@@ -75,9 +83,10 @@ export default function SubStaff() {
           Department cell about: secretary, deputy secretary and member.
         </Typography>
         <Grid container spacing={2}>
-          {departmentCell.map((testimonial, index) => (
+          {departmentCell.map((staff, index) => (
             <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
               <Card
+                onClick={() => route.push(`/staff/${toSlugify(staff.name)}-${staff.id}`)}
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -99,9 +108,9 @@ export default function SubStaff() {
                   }}
                 >
                   <CardHeader
-                    avatar={testimonial.avatar}
-                    title={testimonial.name}
-                    subheader={testimonial.type}
+                    avatar={staff.avatar}
+                    title={staff.name}
+                    subheader={staff.type}
                   />
                 </Box>
               </Card>
@@ -114,9 +123,10 @@ export default function SubStaff() {
           Trade union about: team leader and vice president.
         </Typography>
         <Grid container spacing={2}>
-          {tradeUnion.map((testimonial, index) => (
+          {tradeUnion.map((staff, index) => (
             <Grid item xs={12} sm={6} md={6} key={index} sx={{ display: 'flex' }}>
               <Card
+                onClick={() => route.push(`/staff/${toSlugify(staff.name)}-${staff.id}`)}
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -138,9 +148,9 @@ export default function SubStaff() {
                   }}
                 >
                   <CardHeader
-                    avatar={testimonial.avatar}
-                    title={testimonial.name}
-                    subheader={testimonial.type}
+                    avatar={staff.avatar}
+                    title={staff.name}
+                    subheader={staff.type}
                   />
                 </Box>
               </Card>
