@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
 import StaffHead from "@/components/client/client-staff/staff.head";
 import SubStaff from "@/components/client/client-staff/staff.substaff";
-import TableStaff from "@/components/client/client-staff/staff.table";
+import ClientTableStaff from "@/components/client/client-staff/staff.table.client";
 import { Box, Divider } from "@mui/material";
 
 const ClientStaff = () => {
@@ -12,19 +12,23 @@ const ClientStaff = () => {
     return (
         <Box
             sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
                 pt: { xs: 12, sm: 12 },
-                pb: { xs: 4, sm: 4 },
             }}
         >
-            <Breadcrumb
-                breadcrumb={breadcrumb}
-            />
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
+                <Breadcrumb
+                    breadcrumb={breadcrumb}
+                />
+            </Box>
             <StaffHead />
             <SubStaff />
-            <TableStaff />
+            <ClientTableStaff />
         </Box>
     )
 }

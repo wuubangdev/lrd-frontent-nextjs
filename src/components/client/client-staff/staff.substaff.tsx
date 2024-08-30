@@ -44,18 +44,14 @@ export default function SubStaff() {
     <Container
       id="substaff"
       sx={{
-        pt: { xs: 4, sm: 6 },
+        pt: { xs: 4, sm: 4 },
         pb: { xs: 2, sm: 4 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: { xs: 2, sm: 1 },
-        backgroundImage: (theme) =>
-          theme.palette.mode === 'light'
-            ? "linear-gradient(to bottom right, #FFFEFF , #9DCFFF)"
-            : "",
-        borderRadius: "8px"
+
       }}
     >
       <Box
@@ -68,7 +64,7 @@ export default function SubStaff() {
           sx={{
             fontSize: "20px",
             fontWeight: 600,
-            color: (theme) => theme.palette.mode === "light" ? "#FF3532" : ""
+            color: (theme) => theme.palette.mode === "light" ? "#0263B6" : ""
           }}
         >
           Department Cell & Trade Union
