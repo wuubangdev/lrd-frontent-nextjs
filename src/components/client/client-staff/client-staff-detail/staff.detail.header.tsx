@@ -57,12 +57,7 @@ export default function StaffDetailHeader() {
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         {heads.map((head, i) => (
-          <Grid
-            item
-            key={i}
-            xs={12}
-            md={6}
-          >
+          <Grid item key={i} xs={12} md={6}>
             <Card
               sx={{
                 p: 2,

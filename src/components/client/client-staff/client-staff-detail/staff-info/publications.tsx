@@ -89,7 +89,7 @@ const listStaff = [
     createData(15, { id: 15, name: 'Dao Hoang Kiem' }, "Researcher", "Land Management", "abc@gmail.com", "0123456789"),
 ]
 
-export default function ClientTableStaff() {
+export default function Publications() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const handleChangePage = (event: unknown, newPage: number) => {
@@ -124,25 +124,6 @@ export default function ClientTableStaff() {
 
                 }}
             >
-                <Box
-                    sx={{
-                        width: { sm: '100%', md: '100%' },
-                        textAlign: { sm: 'center', md: 'center' },
-                    }}
-                >
-                    <Typography component="h2" variant="h4" color="text.primary"
-                        sx={{
-                            fontSize: "20px",
-                            fontWeight: 600,
-                            color: (theme) => theme.palette.mode === "light" ? "#FF3532" : ""
-                        }}
-                    >
-                        List of staff in land resources department
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary" fontSize={"20px"}>
-                        There are 15 staffs are there in department
-                    </Typography>
-                </Box>
                 <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                     <TableContainer sx={{ maxHeight: "100%" }}>
                         <Table stickyHeader aria-label="sticky table">

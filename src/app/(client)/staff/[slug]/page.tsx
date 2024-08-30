@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
+import StaffDetailContent from "@/components/client/client-staff/client-staff-detail/staff.detail.content";
 import StaffDetailHeader from "@/components/client/client-staff/client-staff-detail/staff.detail.header";
 import { Box } from "@mui/material";
 
@@ -27,6 +28,7 @@ const StaffDetails = () => {
                 />
             </Box>
             <StaffDetailHeader />
+            <StaffDetailContent />
         </Box>
     )
 }
