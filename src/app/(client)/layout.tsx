@@ -7,10 +7,10 @@ import AppAppBar from '@/components/client/header/AppAppBar';
 import getLPTheme from '@/components/client/theme/getLPTheme';
 import Footer from '@/components/client/footer/Footer';
 
-export const metadata = {
-    title: 'Home Page',
-    description: 'Next.js App Router + Material UI v5',
-};
+// export const metadata = {
+//     title: 'Home Page',
+//     description: 'Next.js App Router + Material UI v5',
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const [mode, setMode] = React.useState<PaletteMode>('light');

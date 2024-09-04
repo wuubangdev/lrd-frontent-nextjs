@@ -126,7 +126,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => route.push('/')}
+                  onClick={() => route.push('/academy')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body1" color="text.primary">
