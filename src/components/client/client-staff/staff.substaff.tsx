@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useRouter } from 'next/navigation';
 import { toSlugify } from '@/utils/global.hook';
+import Link from 'next/link';
 
 const departmentCell = [
   {
@@ -86,7 +87,6 @@ export default function SubStaff() {
           {departmentCell.map((staff, index) => (
             <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
               <Card
-                onClick={() => route.push(`/staff/${toSlugify(staff.name)}-${staff.id}`)}
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -99,20 +99,31 @@ export default function SubStaff() {
                   }
                 }}
               >
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    pr: 2,
-                  }}
+                <Link
+                  href={`/staff/${toSlugify(staff.name)}-${staff.id}`}
+                  style={{ textDecoration: 'unset', }}
                 >
-                  <CardHeader
-                    avatar={staff.avatar}
-                    title={staff.name}
-                    subheader={staff.type}
-                  />
-                </Box>
+                  <Box
+                    component="span"
+                    sx={{
+
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      pr: 2,
+                      transition: 0.3,
+                      '&:hover': {
+                        opacity: 0.7,
+                      },
+                    }}
+                  >
+                    <CardHeader
+                      avatar={staff.avatar}
+                      title={staff.name}
+                      subheader={staff.type}
+                    />
+                  </Box>
+                </Link>
               </Card>
             </Grid>
           ))}
@@ -126,7 +137,6 @@ export default function SubStaff() {
           {tradeUnion.map((staff, index) => (
             <Grid item xs={12} sm={6} md={6} key={index} sx={{ display: 'flex' }}>
               <Card
-                onClick={() => route.push(`/staff/${toSlugify(staff.name)}-${staff.id}`)}
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -139,20 +149,32 @@ export default function SubStaff() {
                   }
                 }}
               >
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    pr: 2,
-                  }}
+
+                <Link
+                  href={`/staff/${toSlugify(staff.name)}-${staff.id}`}
+                  style={{ textDecoration: 'unset', }}
                 >
-                  <CardHeader
-                    avatar={staff.avatar}
-                    title={staff.name}
-                    subheader={staff.type}
-                  />
-                </Box>
+                  <Box
+                    component="span"
+                    sx={{
+
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      pr: 2,
+                      transition: 0.3,
+                      '&:hover': {
+                        opacity: 0.7,
+                      },
+                    }}
+                  >
+                    <CardHeader
+                      avatar={staff.avatar}
+                      title={staff.name}
+                      subheader={staff.type}
+                    />
+                  </Box>
+                </Link>
               </Card>
             </Grid>
           ))}

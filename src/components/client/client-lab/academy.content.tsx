@@ -7,7 +7,7 @@ const images = [
     '/images/hero/tuyensinh_qldd_2024.jpg',
 ];
 
-export interface ProgramInfoData {
+export interface LabInfoData {
     title: string;
     images: string[];
     accreditation: string;
@@ -30,10 +30,10 @@ export interface ProgramInfoData {
     workplaces: string[];
 }
 interface IProps {
-    programInfoData: ProgramInfoData;
+    programInfoData: LabInfoData;
 }
 
-const AcademyContent = (props: IProps) => {
+const LabContent = (props: IProps) => {
     const {
         title,
         accreditation,
@@ -170,4 +170,4 @@ const AcademyContent = (props: IProps) => {
     );
 };
 
-export default AcademyContent;
+export default LabContent;

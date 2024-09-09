@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/material';
-import AcademyContent, { ProgramInfoData } from './academy.content';
+import LabContent, { LabInfoData } from './academy.content';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -36,8 +36,7 @@ function a11yProps(index: number) {
 }
 
 
-
-export default function AcademyTabs() {
+export default function LabTabs() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -46,10 +45,10 @@ export default function AcademyTabs() {
 
     //Fake data
 
-    const programs: ProgramInfoData[] = [
+    const programs: LabInfoData[] = [
 
         {
-            title: "Đại học Quản lý đất đai",
+            title: "Phòng Thí Nghiệm GIS - Viễn Thám",
             images: [""],
             accreditation: "Ngành được công nhận đạt chuẩn quốc tế AUN-QA năm 2022",
             description: "Đại học Quản lý Đất đai đào tạo sinh viên có khả năng nghiên cứu, vận dụng các kiến thức cơ bản và chuyên ngành, các kỹ năng và sự phát triển của công nghệ thông tin, phân tích, nghiên cứu địa chính, quản lý và khai thác tài nguyên, quy hoạch và sử dụng đất một cách có hiệu quả nhất.",
@@ -303,7 +302,7 @@ export default function AcademyTabs() {
                 {programs && programs.map((program, i) => {
                     return (
                         <AcademyTabPanel key={`program-panel-${i}`} value={value} index={i}>
-                            <AcademyContent programInfoData={program} />
+                            <LabContent programInfoData={program} />
                         </AcademyTabPanel>
                     )
                 })}

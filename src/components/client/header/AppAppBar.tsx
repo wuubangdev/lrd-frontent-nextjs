@@ -12,6 +12,7 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from '@/components/client/header/ToggleColorMode';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const logoStyle = {
   width: '50px',
@@ -109,78 +110,87 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   display: { xs: 'none', md: 'flex' }
 
                 }}>
-                <MenuItem
-                  onClick={() => route.push('/')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Home
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => route.push('/staff')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Staff
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => route.push('/academy')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Academy
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('highlights')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Laboratory
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('pricing')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Quantity
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Research
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Alumni
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    Conference
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body1" color="text.primary">
-                    News
-                  </Typography>
-                </MenuItem>
+                <Link href={`/`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Home
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/staff`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Staff
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/academy`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Academy
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/laboratory`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Laboratory
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/quantity`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Quantity
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/research`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Research
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/alumni`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Alumni
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/conference`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      Conference
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href={`/new`} style={{ textDecoration: 'unset' }}>
+                  <MenuItem
+                    sx={{ py: '6px', px: '12px' }}
+                  >
+                    <Typography variant="body1" color="text.primary">
+                      News
+                    </Typography>
+                  </MenuItem>
+                </Link>
               </Box>
             </Box>
             <Box

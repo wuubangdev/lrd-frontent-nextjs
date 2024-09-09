@@ -10,6 +10,7 @@ const BrandStack = () => {
                 useFlexGap
                 sx={{
                     width: { xs: '100%', sm: '70%' },
+                    mt: { xs: 2, sm: 1 },
                 }}
             >
                 <Typography
@@ -26,6 +27,7 @@ const BrandStack = () => {
                         component="span"
                         variant="h6"
                         sx={{
+                            display: { xs: 'none', sm: "block" },
                             fontSize: 'clamp(2.5rem, 10vw, 1.5rem)',
                             color: (theme) =>
                                 theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',

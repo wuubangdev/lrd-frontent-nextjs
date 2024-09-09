@@ -10,8 +10,9 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import { Box, Container, Link } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { toSlugify } from '@/utils/global.hook';
+import Link from 'next/link';
 
 interface Column {
     id: 'no' | 'nameId' | 'nameId' | 'title' | 'major' | 'email' | 'phone';
@@ -32,7 +33,25 @@ const columns: readonly Column[] = [
         label: 'Name',
         minWidth: "180px",
         align: 'left',
-        format: (value) => <Link href={`/staff/${toSlugify(value.name)}-${value.id}`}>{value.name}</Link>
+        format: (value) =>
+            <Link
+                href={`/staff/${toSlugify(value.name)}-${value.id}`}
+                style={{ textDecoration: 'unset', }}
+            >
+                <Box
+                    component="span"
+                    sx={{
+
+                        color: 'inherit',
+                        transition: 0.3,
+                        '&:hover': {
+                            opacity: 0.7,
+                        },
+                    }}
+                >
+                    {value.name}
+                </Box>
+            </Link>
     },
     {
         id: 'title',
@@ -50,13 +69,49 @@ const columns: readonly Column[] = [
         id: 'email',
         label: 'Email',
         align: 'left',
-        format: (value) => <Link href={`mailto:${value}`}>{value}</Link>
+        format: (value) =>
+            <Link
+                href={`/staff/${toSlugify(value.name)}-${value.id}`}
+                style={{ textDecoration: 'unset', }}
+            >
+                <Box
+                    component="span"
+                    sx={{
+
+                        color: 'inherit',
+                        transition: 0.3,
+                        '&:hover': {
+                            opacity: 0.7,
+                        },
+                    }}
+                >
+                    {value}
+                </Box>
+            </Link>
     },
     {
         id: 'phone',
         label: 'Phone',
         align: 'right',
-        format: (value) => <Link href={`tel:${value}`}>{value}</Link>
+        format: (value) =>
+            <Link
+                href={`/staff/${toSlugify(value.name)}-${value.id}`}
+                style={{ textDecoration: 'unset', }}
+            >
+                <Box
+                    component="span"
+                    sx={{
+
+                        color: 'inherit',
+                        transition: 0.3,
+                        '&:hover': {
+                            opacity: 0.7,
+                        },
+                    }}
+                >
+                    {value}
+                </Box>
+            </Link>
     },
 ];
 

@@ -96,7 +96,6 @@ export default function StaffHead() {
               md={4}
             >
               <Card
-                onClick={() => route.push(`/staff/${toSlugify(head.name)}-${head.id}`)}
                 sx={{
                   p: 2,
                   display: 'flex',
@@ -137,23 +136,46 @@ export default function StaffHead() {
                         {head.title}
                       </Typography>
                     </Box>
-                    <Image
-                      alt='avatar-staff'
-                      src={head.avatar}
-                      width={150}
-                      height={150}
-                    />
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'baseline',
-                        color: head.title === 'Head of department' ? 'grey.50' : undefined,
-                      }}
+                    <Link
+                      href={`/staff/${toSlugify(head.name)}-${head.id}`}
+                      style={{ textDecoration: 'unset', }}
                     >
-                      <Typography component="h3" variant="h6">
-                        {head.name}
-                      </Typography>
-                    </Box>
+                      <Box
+                        component="span"
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          color: head.title === 'Head of department' ? 'grey.100' : '',
+                          pt: 2,
+                          gap: 1,
+                          transition: 0.3,
+                          '&:hover': {
+                            opacity: 0.7,
+                          },
+                        }}
+                      >
+                        <Image
+                          alt='avatar-staff'
+                          src={head.avatar}
+                          width={150}
+                          height={150}
+                        />
+                        <Box
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'baseline',
+                            color: head.title === 'Head of department' ? 'grey.50' : undefined,
+                          }}
+                        >
+                          <Typography component="h3" variant="h6">
+                            {head.name}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Link>
+
                     <Box
                       sx={{
                         display: 'flex',
