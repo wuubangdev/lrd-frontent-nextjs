@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import { Link } from '@mui/material';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { toSlugify } from '@/utils/global.hook';
 
 const heads = [
@@ -53,7 +52,6 @@ const heads = [
 ];
 
 export default function StaffHead() {
-  const route = useRouter();
   return (
     <>
       <Container
@@ -175,7 +173,6 @@ export default function StaffHead() {
                         </Box>
                       </Box>
                     </Link>
-
                     <Box
                       sx={{
                         display: 'flex',

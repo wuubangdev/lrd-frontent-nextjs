@@ -3,7 +3,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
-
 export interface IPublication {
     authors: string;
     year: string;
