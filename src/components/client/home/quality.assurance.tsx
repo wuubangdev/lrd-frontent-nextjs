@@ -122,13 +122,10 @@ export default function QualityAssurance() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Quality Assurance
+          Đảm bảo chất lượng
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+          Ngành quản lý đất đai bậc đại học đã đạt tiêu chuẩn đánh giá chất lượng quốc tế theo tiêu chuẩn của AUN-QA.
         </Typography>
       </Box>
       <Box

@@ -12,36 +12,36 @@ import ModalAdmission from './modal/modal.admission';
 
 const admissions = [
   {
-    title: 'Land Management - AUN-QA Standard',
-    type: 'University',
+    title: 'Quản lý đất đai - Đạt chuẩn AUN',
+    type: 'Bậc đại học',
     image: "/images/admission/dh_qldd.jpg",
     image_card: "/images/admission/resize/dh_qldd.png",
     description:
-      "Training engineers in state administrative management, engineering - technology, management - exploitation and sustainable development of practical issues related to land resources and land management."
+      "Đào tạo trình độ kỹ sư về quản lý hành chính nhà nước, kỹ thuật - công nghệ, quản lý - khai thác và phát triển bền vững các vấn đề thực tiễn liên quan đến lĩnh vực tài nguyên đất đai, quản lý đất đai."
   },
   {
-    title: 'Regional and Urban Planning',
-    type: 'University',
+    title: 'Quy hoạch vùng và đô thị - Ngành mới',
+    type: 'Bậc đại học',
     image: "/images/admission/dh_quyhoach.jpg",
     image_card: "/images/admission/resize/quyhoach.png",
     description:
-      "Training engineers and learners to be trained in the ability to complete assigned tasks, be creative, have organizational skills, and work professionally in the field of regional planning, urban spatial planning and design to contribute to meeting human resources for the locality to serve the community."
+      "Đào tạo trình độ kỹ sư, người học được đào tạo năng lực hoàn thành nhiệm vụ được giao, sáng tạo, kỹ năng tổ chức, làm việc chuyên nghiệp trong lĩnh vực về quy hoạch cấp vùng, quy hoạch và thiết kế không gian đô thị để góp phần đáp ứng nguồn nhân lực cho địa phương phục vụ cộng đồng."
   },
   {
-    title: 'Master of Land Management',
-    type: 'Graduate Admissions',
+    title: 'Thạc sĩ chuyên nghành Quản lý đất đai',
+    type: 'Sau đại học',
     image: "/images/admission/ths_qldd.jpg",
     image_card: "/images/admission/resize/ths_qldd.png",
     description:
-      "Learners are highly trained, have solid expertise in state administrative management of land, engineering - technology, management - exploitation and sustainable development of practical issues related to the field of land resources and land management."
+      "Người học được đào tạo kiến thức chuyên sâu về quản lý đất đai, đảm nhiệm nhiệm vụ quản lý, giảng dạy và nghiên cứu khoa học, ứng dụng vào thực tế một cách có hiệu quả."
   },
   {
-    title: 'Doctor of Land Management',
-    type: 'Graduate Admissions',
+    title: 'Tiến sĩ chuyên ngành Quản lý đất đai',
+    type: 'Sau đại học',
     image: "/images/admission/ts_qldd.jpg",
     image_card: "/images/admission/resize/ts_qldd.png",
     description:
-      "Learners are trained in in-depth knowledge of land management, undertake the task of management, teaching and scientific research, and apply it effectively in practice."
+      "Người học được đào tạo nâng cao, có chuyên môn vững vàng về quản lý hành chính nhà nước về đất đai, kỹ thuật - công nghệ, quản lý - khai thác và phát triển bền vững các vấn đề thực tiễn liên quan đến lĩnh vực tài nguyên đất đai, quản lý đất đai."
   },
 ];
 
@@ -83,11 +83,11 @@ export default function Admission() {
           }}
         >
           <Typography component="h2" variant="h4" color="text.primary">
-            Admission
+            Thông tin tuyển sinh
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            The Department of Land Resources trains in 2 fields of Land Management and Urban Planning.
-            Undergraduate, Graduate Admissions: Enrollment of Master of Land Management & Doctoral Enrollment in Land Management
+            Bộ môn tài nguyên đất đai tuyển sinh 2 nghành học ở bậc đại học là: Quản lý đất đai, Quy hoạch vùng và đô thị.
+            Tuyển sinh sau đại học bao gồm: Tiến sĩ và thạc sĩ chuyên ngành Quản lý đất đai.
           </Typography>
         </Box>
         <Grid container spacing={2}>

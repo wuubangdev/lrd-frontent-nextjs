@@ -11,6 +11,7 @@ const BrandStack = () => {
                 sx={{
                     width: { xs: '100%', sm: '70%' },
                     mt: { xs: 2, sm: 1 },
+                    mb: { xs: 2, sm: 4 },
                 }}
             >
                 <Typography
@@ -35,20 +36,13 @@ const BrandStack = () => {
                     >
                         <TypeAnimation
                             sequence={[
-                                'Land',
+                                'Tài Nguyên',
                                 1500,
-                                'Land Resource',
+                                'Tài Nguyên Đất Đai',
                                 1500,
-                                'Land Resource Department',
-                                1500,
-                                'Land Resource Department',
-                                1500,
-                                'Land Resource',
-                                1500,
-                                'Land',
+                                'Tài Nguyên',
                                 1500,
                                 '',
-                                1500,
                             ]}
                             wrapper="span"
                             speed={50}
@@ -63,7 +57,7 @@ const BrandStack = () => {
                     color="text.secondary"
                     sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
                 >
-                    Faculty of Environment & Natural Resources - Can Tho University
+                    Khoa Môi trường và Tài nguyên thiên nhiên - Đại học Cần Thơ
                 </Typography>
             </Stack>
         </>

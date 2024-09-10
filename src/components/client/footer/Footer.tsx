@@ -14,7 +14,7 @@ import Image from 'next/image';
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
-      {'Copyright © '}
+      {'Bản quyền © '}
       <Link href="https://wuubangdev.click/" target="_blank">wuubangdev&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
@@ -51,11 +51,11 @@ export default function Footer() {
             height={40}
           />
           <Typography variant="h5" fontWeight={600} gutterBottom m={0} color="#FF5500">
-            Land Resource Department (LRD)
+            Bộ môn Tài nguyên Đất đai (LRD)
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            College of Environment and Natural Resources, Can Tho University
-            Campus II, 3/2 Street, Xuan Khanh Ward, Ninh Kieu District, Can Tho City, Vietnam
+            Khoa Môi trường và Tài nguyên thiên nhiên, Đại học Cần Thơ
+            Khu II, đường 3/2, phường Xuân Khánh, quận Ninh Kiều, thành phố Cần Thơ, Việt Nam
           </Typography>
           <Typography variant="body1" color="text.secondary">
             Facebook: <Link href='https://www.facebook.com/TaiNguyenDatDaiCTU' target="_blank">https://www.facebook.com/TaiNguyenDatDaiCTU</Link>

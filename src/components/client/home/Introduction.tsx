@@ -16,19 +16,19 @@ import LandslideIcon from '@mui/icons-material/Landslide';
 const items = [
   {
     icon: <LandslideIcon />,
-    title: 'Land Evaluation, Land Use Planning and Real Estate',
+    title: 'Kế hoạch, quy hoạch sử dụng đất',
     imageLight: 'url("/images/intro/planning_light.png")',
     imageDark: 'url("/images/intro/planning_dark.png")',
   },
   {
     icon: <ForestIcon />,
-    title: 'Simulation and Forecast, Management of Land Resources',
+    title: 'Tài nguyên đất đai',
     imageLight: 'url("/images/intro/landr_light.png")',
     imageDark: 'url("/images/intro/landr_dark.png")',
   },
   {
     icon: <LayersIcon />,
-    title: 'GIS, Remote Sensing, Mapping and Surveying laboratory.',
+    title: 'Viễn thám và Hệ thống thông tin địa lý',
     imageLight: 'url("/images/intro/rs_light.png")',
     imageDark: 'url("/images/intro/rs_dark.png")',
   },
@@ -52,7 +52,7 @@ export default function Introduction() {
             theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
         }}
       >
-        Introduction
+        Giới thiệu
       </Typography>
       <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
@@ -65,10 +65,7 @@ export default function Introduction() {
                 textAlign: "justify"
               }}
             >
-              Department of Soil Science and Land Management, College of Agriculture and Applied Biology was the precursor of Land Resources Department, established in 1976.
-              Department of Land Resources (DLR) was founded in 2010 by splitting the former department and merged to the College of Environment and Natural Resources.
-              The faculty staffs have high education qualities, practical experiences and professional knowledge. DLR focuses on teaching, training, conducting scientific
-              research and transferring technology to advance socio-economic development of the Mekong Delta region.
+              Bộ môn Tài nguyên đất đai được thành lập từ Bộ môn Khoa học đất và Quản lý đất đai thuộc Khoa Nông nghiệp và sinh học ứng dụng, trên cơ sở của Bộ môn Nông Hoá Thổ Nhưỡng thuộc Khoa Trồng Trọt cũ được thành lập năm 1976. Từ năm 2010, bộ môn được sáp nhập vào khoa Môi trường và Tài nguyên thiên nhiên. Ðội ngũ giảng viên có trình độ cao, phần lớn được đào tạo sau đại học ngoài nước, có nhiều kinh nghiệm thực tế, có quan hệ tốt trong hợp tác và chuyển giao các kiến thức khoa học cho địa phương, và tham gia thực hiện nhiều chương trình hợp tác quốc tế.
             </Typography>
           </div>
         </Grid>
@@ -187,7 +184,7 @@ export default function Introduction() {
                   '&:hover > svg': { transform: 'translateX(2px)' },
                 }}
               >
-                <span>Learn more</span>
+                <span>Xem thêm</span>
                 <ChevronRightRoundedIcon
                   fontSize="small"
                   sx={{ mt: '1px', ml: '2px' }}
@@ -274,7 +271,7 @@ export default function Introduction() {
                         event.stopPropagation();
                       }}
                     >
-                      <span>Learn more</span>
+                      <span>Xem thêm</span>
                       <ChevronRightRoundedIcon
                         fontSize="small"
                         sx={{ mt: '1px', ml: '2px' }}

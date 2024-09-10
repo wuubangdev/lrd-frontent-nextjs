@@ -115,7 +115,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Home
+                      Trang chủ
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -124,7 +124,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Staff
+                      Cán bộ
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -133,7 +133,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Academy
+                      Đào tạo
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -142,7 +142,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Laboratory
+                      Vật chất
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -151,7 +151,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Quantity
+                      Chất lượng
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -160,7 +160,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Research
+                      Nghiên cứu
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -169,7 +169,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Alumni
+                      Người học
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -178,7 +178,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      Conference
+                      Hội thảo
                     </Typography>
                   </MenuItem>
                 </Link>
@@ -187,7 +187,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     sx={{ py: '6px', px: '12px' }}
                   >
                     <Typography variant="body1" color="text.primary">
-                      News
+                      Tin tức
                     </Typography>
                   </MenuItem>
                 </Link>

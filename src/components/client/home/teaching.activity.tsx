@@ -11,21 +11,21 @@ import Link from 'next/link';
 const teaches = [
   {
     image: "/images/academic/belm-8_o.jpg",
-    title: 'B.E in Land Management',
+    title: 'Đại học Quản lý đất đai',
     description:
-      "The main objective of the Bachelor of Engineering in Land Management (BELM) programme is to develop competent engineers capable of researching, applying knowledge and possessing specific skills in the related field of land management.",
+      "Đại học Quản lý Đất đai đào tạo sinh viên có khả năng nghiên cứu, vận dụng các kiến thức cơ bản và chuyên ngành, các kỹ năng và sự phát triển của công nghệ thông tin, phân tích, nghiên cứu địa chính, quản lý và khai thác tài nguyên, quy hoạch và sử dụng đất một cách có hiệu quả nhất. Ngành được công nhận đạt chuẩn quốc tế AUN-QA năm 2022"
   },
   {
     image: "/images/academic/master-land-management-7_o.jpg",
-    title: 'Master in Land Management',
+    title: 'Thạc sĩ Quản lý đất đai',
     description:
-      "The Master's degree in Land Management aims to make an important contribution human resources in land management for the whole country in general and for the Mekong Delta in particular as well as to adapt to Urban and rural development requirement.  This requires staff with postgraduate qualifications to support land management now and in the future.",
+      "Đào tạo thạc sĩ Quản lý đất đai nhằm nâng cao trình độ chuyên môn và năng lực trong công tác Quản lý đất đai; có kiến thức sâu rộng, có khả năng phụ trách các nhiệm vụ quản lý, nghiên cứu và ứng dụng các kiến thức vào thực tế một cách có hiệu quả trong điều kiện của ĐBSCL. Học bổ túc kiến thức Cao học QLĐĐ Tuyển sinh Thạc sĩ QLĐĐ 2022"
   },
   {
     image: "/images/academic/doctor-land-management-6_o.jpg",
-    title: 'PhD in Land Management',
+    title: 'Tiến sĩ Quản lý đất đai',
     description:
-      'Programme of PhD in Land Management aims to improve in-depth knowledge, teaching and scientific research in land management for learners under socio-economic and environmental changes of the Mekong Delta.',
+      " Đào tạo Tiến sĩ Quản lý đất đai nhằm nâng cao trình độ chuyên môn và năng lực trong công tác quản lý đất đai, có kiến thức chuyên sâu đảm nhiệm nhiệm vụ quản lý, giảng dạy và nghiên cứu khoa học, ứng dụng vào thực tế một cách có hiệu quả trong điều kiện tự nhiên và kinh tế xã hội của ĐBSCL. Tuyển sinh Tiến sĩ QLĐĐ 2022"
   },
 ];
 
@@ -51,10 +51,10 @@ export default function TeachingActivity() {
           }}
         >
           <Typography component="h2" variant="h4" color="text.primary">
-            Teaching Activity
+            Hoạt động giảng dạy
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            DLR focuses on teaching, training, conducting scientific research and transferring technology to advance socio-economic development of the Mekong Delta region.
+            Bộ môn Tài nguyên Đất đai tập chung vào các hoạt động giảng dạy tập huấn các công nghệ, kiến thức về phát triển kinh tế nông nghiệp, sử dụng đất đai hiệu quả và phát triển bền vững.
           </Typography>
         </Box>
         <Grid container spacing={2}>

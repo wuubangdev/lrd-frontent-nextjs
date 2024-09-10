@@ -64,7 +64,7 @@ export default function AskQuestion() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Some questions
+        Một số vấn đề phổ biến
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
@@ -77,18 +77,18 @@ export default function AskQuestion() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle1">
-              How do you contact us?
+              Thông tin liên hệ ?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body1"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{ maxWidth: { sm: '100%', md: '100%' } }}
             >
-              You can contact us by emailing
+              Bạn có thế liên hệ tư vấn tuyển sinh hoặc hợp tác nghiên cứu và chuyển giao công nghệ quâ địa chỉ mail:
               <Link> support@email.com </Link>
-              or calling our toll-free number: <Link>0123456789</Link>
+              liên hệ qua số điện thoại: <Link>0123456789</Link> hoặc liên hệ qua địa chỉ facebook: <Link href='https://www.facebook.com/TaiNguyenDatDaiCTU'>https://www.facebook.com/TaiNguyenDatDaiCTU</Link>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -102,7 +102,7 @@ export default function AskQuestion() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle1">
-              Can you need forms?
+              Bạn có cẩn một số biểu mẫu ?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -130,7 +130,7 @@ export default function AskQuestion() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle1">
-              Want to collaborate on research?
+              Địa chỉ cơ quan ?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -139,8 +139,7 @@ export default function AskQuestion() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '100%' } }}
             >
-              If you want to collaborate on research with us about: land, planning, remote sesing, GIS and orther. Please contact with us by phone or offline meeting.
-              Our location at 3/2 Street, Ninh Kieu Province, Can Tho City.
+              Chúng tôi ở khu II Đại học Cần Thơ đường 3/2 , quận Ninh Kiều, thành phố Cần Thơ.
             </Typography>
           </AccordionDetails>
         </Accordion>

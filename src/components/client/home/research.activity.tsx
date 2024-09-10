@@ -10,21 +10,21 @@ import Link from 'next/link';
 const researches = [
   {
     image: "/images/research/international-cooperations-9_o.png",
-    title: 'International cooperations',
+    title: 'Hợp tác quốc tế',
     description:
-      'DLR has long term collaboration with Wageningen University (Netherlands), Asian Institute Technology - AIT (Thailand), Centre for Remote Sensing and Image Processing, National University - CRISP (Singapore), Centre for Space and Remote Sensing...',
+      "Từ ngày thành lập, Bộ môn đã thiết lập và giữ mối quan hệ hợp tác với các viện nghiên cứu và trường đại học quốc tế như Wageningen University (Hà Lan), Asian Institute Technology -AIT (Thái Lan), Centre for Remote Sensing and Image Processing, National University - CRISP (Singapore), Centre for Space and Remote Sensing Research - CSRSR (Đài Loan), International Rice Research Institute-IRRI (Philippines), Viện nghiên cứu phát triển - IRD (Pháp), ACIAR (Australia)."
   },
   {
     image: "/images/research/conferrences-4_o.png",
-    title: 'Conferences',
+    title: 'Hội thảo',
     description:
-      'DLR is a core member of many prestigious national and international conferences hosted by Can Tho University on GIS, Remote sensing and Land management. Especially international conferences such as GIS-IDEAS 2018, ACRS 2021.',
+      "Bộ môn Tài nguyên Đất đai là đơn vị tổ chức chính nhiều hội thảo trong và ngoài nước trong các lĩnh vực liên quan đến Tài nguyên Đất đai, Quản lý đất đai, GIS và Viễn thám. Trong đó có nhiều hội thảo quốc tê như GIS-IDEAS 2018, Hội thảo Viễn thám Châu Á 2021."
   },
   {
     image: "/images/research/publication-2_o.png",
-    title: 'Publications',
+    title: 'Xuất bản sách, giáo trình',
     description:
-      ' Besides training,  international publication is an important development orientation of DLR. We try to improve not only the quantity but also the quality of publications.',
+      "Xuất bản các kết quả nghiên cứu khoa học giữ vai trò quan trong trong hỗ trợ đào tạo. Bộ môn chú trọng đến các các xuất bản nằm trong danh mục Hội đồng chức danh nhà nước công nhận. Hướng đến nâng cao số lượng và chất lượng xuất bản quốc tế."
   },
 ];
 
@@ -57,10 +57,10 @@ export default function ResearchActivity() {
           }}
         >
           <Typography component="h2" variant="h4" color="text.primary">
-            Research Activity
+            Hoạt đông nghiên cứu
           </Typography>
           <Typography variant="body1" sx={{ color: (theme) => theme.palette.mode === 'light' ? "grey.400" : 'grey.400' }}>
-            DLR focuses on teaching, training, conducting scientific research and transferring technology to advance socio-economic development of the Mekong Delta region.
+            Nghiên cứu sử dụng nguồn tài nguyên đất đai cho vùng Đồng bằng sông Cửu Long nói riêng và cả nước nói chung.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>
