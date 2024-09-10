@@ -68,13 +68,13 @@ const LabContent = (props: IProps) => {
                     </Box>
                     <Card>
                         <CardContent sx={{ textAlign: "justify" }}>
-                            <Typography variant="h6" sx={{ fontWeight: 600 }}>Nhiệm vụ</Typography>
+                            <Typography variant="h6" sx={{ fontWeight: 600, color: "#0263B6" }}>Nhiệm vụ</Typography>
                             <Typography variant="body1" paragraph sx={{ textIndent: '20px' }}>
                                 {task}
                             </Typography>
-                            <Typography variant="h6" sx={{ fontWeight: 600 }}>Thiết bị:</Typography>
+                            <Typography variant="h6" sx={{ fontWeight: 600, color: "#0263B6" }}>Thiết bị:</Typography>
                             <LabDeviceTable listDevices={devices} />
-                            <Typography variant="h6" sx={{ fontWeight: 600 }}>Học phần phụ trách giảng dạy, Lĩnh vực nghiên cứu:</Typography>
+                            <Typography variant="h6" sx={{ fontWeight: 600, color: "#0263B6" }}>Học phần phụ trách giảng dạy, Lĩnh vực nghiên cứu:</Typography>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} md={6} p={2}>
                                     <Card>
@@ -105,19 +105,19 @@ const LabContent = (props: IProps) => {
                             <Typography variant="body1" fontStyle="italic">{researchArea.description}</Typography>
                             <Typography variant="body1" fontStyle="italic" fontWeight={600} pt={1} >Định hướng nghiên cứu chính:</Typography>
                             {researchArea?.objective.map((iteam, i) => (
-                                <Typography variant="body1">{`* ${iteam}`}</Typography>
+                                <Typography key={`objective-${i}`} variant="body1">{`* ${iteam}`}</Typography>
                             ))}
                             <Grid container spacing={2} p={2}>
                                 <Grid item xs={12} md={6}>
                                     <Typography variant="body1" fontStyle="italic" fontWeight={600} pt={1}>Hợp tác quốc tế:</Typography>
                                     {researchArea?.globalRelation.map((iteam, i) => (
-                                        <Typography variant="body1">{`* ${iteam}`}</Typography>
+                                        <Typography key={`global-relation-${i}`} variant="body1">{`* ${iteam}`}</Typography>
                                     ))}
                                 </Grid>
                                 <Grid item xs={12} md={6}>
                                     <Typography variant="body1" fontStyle="italic" fontWeight={600} pt={1}>Hợp tác trong nước:</Typography>
                                     {researchArea?.localRelation.map((iteam, i) => (
-                                        <Typography variant="body1">{`* ${iteam}`}</Typography>
+                                        <Typography key={`local-relation-${i}`} variant="body1">{`* ${iteam}`}</Typography>
                                     ))}
                                 </Grid>
                             </Grid>

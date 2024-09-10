@@ -5,7 +5,6 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/material';
 import LabContent, { IDevice, LabInfoData } from './lab.content';
-import { title } from 'process';
 import { IPublication } from '../publication/publication.item';
 
 interface TabPanelProps {
@@ -285,15 +284,12 @@ function a11yProps(index: number) {
     };
 }
 
-
 export default function LabTabs() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
-
-
     return (
         <Container>
             <Box sx={{ width: '100%' }}>
