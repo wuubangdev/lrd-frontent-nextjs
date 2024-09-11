@@ -18,30 +18,28 @@ const QualityContent = (props: IProps) => {
         content,
     } = props.programInfoData;
     return (
-        <Box sx={{ flexGrow: 1, padding: 2 }}>
-            <Grid container spacing={2}>
-                {banner !== ''
-                    ?
-                    <>
-                        <img alt='banner-quality' src={banner} width="100%" style={{ borderRadius: "10px" }} />
-                    </>
-                    : ""
-                }
-                <Grid item xs={12} md={12}>
-                    <Card sx={{ mb: 3 }}>
-                        <CardContent sx={{ textAlign: "justify", pb: 0 }}>
-                            <Box sx={{ textIndent: '20px', m: 0, fontWeight: 500 }}>
-                                {content}
-                            </Box>
-                        </CardContent>
-                    </Card>
-                    <Box sx={{ mb: { xs: 2, sm: 3 }, }}>
-                        <ClientSlider
-                            images={images}
-                        />
-                    </Box>
-                    <Typography variant="h6" sx={{ fontWeight: 600 }} textAlign="center">{`Một số hình ảnh của hoạt động`}</Typography>
-                </Grid>
+        <Box sx={{ flexGrow: 1, py: 2 }}>
+            {banner !== ''
+                ?
+                <>
+                    <img alt='banner-quality' src={banner} width="100%" style={{ borderRadius: "10px" }} />
+                </>
+                : ""
+            }
+            <Grid item xs={12} md={12}>
+                <Card sx={{ mb: 3 }}>
+                    <CardContent sx={{ textAlign: "justify", pb: 0 }}>
+                        <Box sx={{ textIndent: '20px', m: 0, fontWeight: 500 }}>
+                            {content}
+                        </Box>
+                    </CardContent>
+                </Card>
+                <Box sx={{ mb: { xs: 2, sm: 3 }, }}>
+                    <ClientSlider
+                        images={images}
+                    />
+                </Box>
+                <Typography variant="h6" sx={{ fontWeight: 600 }} textAlign="center">{`Một số hình ảnh của hoạt động`}</Typography>
             </Grid>
         </Box>
     );

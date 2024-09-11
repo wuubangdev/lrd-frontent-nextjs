@@ -31,7 +31,7 @@ const socials: ISocialNetWork[] = [
 
 export default function AlumniSocialNetWork() {
     return (
-        <Container
+        <Box
             sx={{
                 pb: { xs: 3, sm: 4 },
             }}
@@ -67,6 +67,6 @@ export default function AlumniSocialNetWork() {
                     </Grid>
                 ))}
             </Grid>
-        </Container>
+        </Box>
     )
 }

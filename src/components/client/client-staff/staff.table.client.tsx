@@ -30,7 +30,7 @@ const columns: readonly Column[] = [
     },
     {
         id: 'nameId',
-        label: 'Name',
+        label: 'Tên',
         minWidth: "180px",
         align: 'left',
         format: (value) =>
@@ -55,13 +55,13 @@ const columns: readonly Column[] = [
     },
     {
         id: 'title',
-        label: 'Title',
+        label: 'Nội dung',
         align: 'left',
         format: (value) => <Typography variant='inherit'>{value}</Typography>
     },
     {
         id: 'major',
-        label: 'Major',
+        label: 'Chuyên môn',
         align: 'left',
         format: (value) => <Typography variant='inherit'>{value}</Typography>
     },
@@ -91,7 +91,7 @@ const columns: readonly Column[] = [
     },
     {
         id: 'phone',
-        label: 'Phone',
+        label: 'Di động',
         align: 'right',
         format: (value) =>
             <Link
@@ -192,10 +192,10 @@ export default function ClientTableStaff() {
                             color: (theme) => theme.palette.mode === "light" ? "#FF3532" : ""
                         }}
                     >
-                        List of staff in land resources department
+                        Danh sách cán bộ
                     </Typography>
                     <Typography variant="body1" color="text.secondary" fontSize={"20px"}>
-                        There are 15 staffs are there in department
+                        {`Danh sách có tất cả ${listStaff.length} cán bộ`}
                     </Typography>
                 </Box>
                 <Paper sx={{ width: '100%', overflow: 'hidden' }}>

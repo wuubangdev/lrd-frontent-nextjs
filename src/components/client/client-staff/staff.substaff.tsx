@@ -16,19 +16,19 @@ const departmentCell = [
     avatar: <Avatar alt='pham-thi-m' src='/images/avatar/avatar_male.png' />,
     id: 1,
     name: 'Pham Thi Mo',
-    type: 'Secretary',
+    type: 'Bí thư',
   },
   {
     avatar: <Avatar alt='pham-van-h' src='/images/avatar/avatar_female_2.png' />,
     id: 1,
     name: 'Pham Van Huynh',
-    type: 'Deputy Secretary ',
+    type: 'Phó bí thư',
   },
   {
     avatar: <Avatar alt='le-van-d' src='/images/avatar/avatar_female_1.png' />,
     id: 1,
     name: 'Le Van Dinh',
-    type: 'Member',
+    type: 'Ủy viên',
 
   },
 ];
@@ -37,13 +37,13 @@ const tradeUnion = [
     avatar: <Avatar alt='pham-thi-m' src='/images/avatar/avatar_male.png' />,
     id: 1,
     name: 'Tran Thanh Phong',
-    type: 'Team Leader',
+    type: 'Tổ trưởng',
   },
   {
     avatar: <Avatar alt='pham-van-h' src='/images/avatar/avatar_female_2.png' />,
     id: 1,
     name: 'Luc Thien Thinh',
-    type: 'Vice President',
+    type: 'Tổ phó',
   },
 ];
 
@@ -76,12 +76,12 @@ export default function SubStaff() {
             color: (theme) => theme.palette.mode === "light" ? "#0263B6" : ""
           }}
         >
-          Department Cell & Trade Union
+          Chi bộ và Công đoàn
         </Typography>
       </Box>
       <>
         <Typography variant="body1" color="text.secondary" fontSize={"20px"}>
-          Department cell about: secretary, deputy secretary and member.
+          Chi bộ bao gồm:  1 Bí thư, 1 Phó bí thư và 1 Ủy viên
         </Typography>
         <Grid container spacing={2}>
           {departmentCell.map((staff, index) => (
@@ -131,7 +131,7 @@ export default function SubStaff() {
       </>
       <>
         <Typography variant="body1" color="text.secondary" mt={1} fontSize={"20px"}>
-          Trade union about: team leader and vice president.
+          Công đoàn bao gồm 1 tổ trưởng và 1 tố phó
         </Typography>
         <Grid container spacing={2}>
           {tradeUnion.map((staff, index) => (

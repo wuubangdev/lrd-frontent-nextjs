@@ -99,72 +99,69 @@ export default function AlumniList() {
     };
 
     return (
-        <Box>
-            <Container
-                id="sub-staff"
-                sx={{
-                    pb: { xs: 3, sm: 4 },
-                }}
-            >
-                <Typography variant='h5' textAlign='center' mb={2}>DANH SÁCH CỰU SINH VIÊN NGÀNH</Typography>
-                <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                    <TableContainer sx={{ maxHeight: "100%" }}>
-                        <Table stickyHeader aria-label="sticky table" sx={{ border: "0.5px solid #ccc", borderRadius: "5px" }}>
-                            <TableHead >
-                                <TableRow>
-                                    {columns.map((column) => (
-                                        <TableCell
-                                            key={column.id}
-                                            align="left"
-                                            style={{}}
-                                        >
-                                            <Typography variant='inherit' fontWeight={"bold"}>{column.label}</Typography>
-                                        </TableCell>
-                                    ))}
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {listAlumni ? listAlumni
-                                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                    .map((project, index) => {
-                                        return (
-                                            <TableRow hover role="checkbox" tabIndex={-1} key={`table-row-${project.id}-${index}`}>
-                                                {columns.map((column) => {
-                                                    const value = project[column.id];
-                                                    return (
-                                                        <TableCell
-                                                            key={`table-cell-${column.id}-${index}}`}
-                                                            align={column.align}
-                                                            sx={{ py: 1.2, px: 2, minWidth: `${column.minWidth}` }}
-                                                        >
-                                                            {column.format
-                                                                ? column.format(value)
-                                                                : value.toString()}
-                                                        </TableCell>
-                                                    );
-                                                })}
-                                            </TableRow>
-                                        );
-                                    }) :
-                                    <TableRow><TableCell><CircularProgress /></TableCell></TableRow>
-                                }
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
-                    {listAlumni &&
-                        <TablePagination
-                            sx={{ border: "1px solid #ccc" }}
-                            rowsPerPageOptions={[10, 25, 100]}
-                            component="div"
-                            count={listAlumni.length}
-                            rowsPerPage={rowsPerPage}
-                            page={page}
-                            onPageChange={handleChangePage}
-                            onRowsPerPageChange={handleChangeRowsPerPage}
-                        />
-                    }
-                </Paper>
-            </Container>
+        <Box
+            sx={{
+                pb: { xs: 3, sm: 4 },
+            }}
+        >
+            <Typography variant='h5' textAlign='center' mb={2}>DANH SÁCH CỰU SINH VIÊN NGÀNH</Typography>
+            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                <TableContainer sx={{ maxHeight: "100%" }}>
+                    <Table stickyHeader aria-label="sticky table" sx={{ border: "0.5px solid #ccc", borderRadius: "5px" }}>
+                        <TableHead >
+                            <TableRow>
+                                {columns.map((column) => (
+                                    <TableCell
+                                        key={column.id}
+                                        align="left"
+                                        style={{}}
+                                    >
+                                        <Typography variant='inherit' fontWeight={"bold"}>{column.label}</Typography>
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {listAlumni ? listAlumni
+                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                .map((project, index) => {
+                                    return (
+                                        <TableRow hover role="checkbox" tabIndex={-1} key={`table-row-${project.id}-${index}`}>
+                                            {columns.map((column) => {
+                                                const value = project[column.id];
+                                                return (
+                                                    <TableCell
+                                                        key={`table-cell-${column.id}-${index}}`}
+                                                        align={column.align}
+                                                        sx={{ py: 1.2, px: 2, minWidth: `${column.minWidth}` }}
+                                                    >
+                                                        {column.format
+                                                            ? column.format(value)
+                                                            : value.toString()}
+                                                    </TableCell>
+                                                );
+                                            })}
+                                        </TableRow>
+                                    );
+                                }) :
+                                <TableRow><TableCell><CircularProgress /></TableCell></TableRow>
+                            }
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                {listAlumni &&
+                    <TablePagination
+                        sx={{ border: "1px solid #ccc" }}
+                        rowsPerPageOptions={[10, 25, 100]}
+                        component="div"
+                        count={listAlumni.length}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        onPageChange={handleChangePage}
+                        onRowsPerPageChange={handleChangeRowsPerPage}
+                    />
+                }
+            </Paper>
         </Box>
     );
 }

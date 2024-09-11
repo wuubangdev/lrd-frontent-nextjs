@@ -15,7 +15,7 @@ import { toSlugify } from '@/utils/global.hook';
 const heads = [
   {
     id: 1,
-    title: 'Deputy Head of department',
+    title: 'Phó trưởng bộ môn',
     avatar: "/images/avatar/avatar_male.png",
     name: 'Dr. Tran Thi A',
     email: 'tthia@gmail.com',
@@ -27,7 +27,7 @@ const heads = [
   },
   {
     id: 1,
-    title: 'Head of department',
+    title: 'Trưởng bộ môn',
     avatar: "/images/avatar/avatar_female_2.png",
     name: 'Assocc. Prof. Nguyen Van B',
     email: 'nvanb@gmail.com',
@@ -39,7 +39,7 @@ const heads = [
   },
   {
     id: 1,
-    title: 'Deputy Head of department',
+    title: 'Phó trưởng bộ môn',
     avatar: "/images/avatar/avatar_female_1.png",
     name: 'Dr. Le Thanh C',
     email: 'lthanhc@gmail.com',
@@ -78,10 +78,10 @@ export default function StaffHead() {
               color: (theme) => theme.palette.mode === "light" ? "#0263B6" : ""
             }}
           >
-            Department's management board
+            Ban Chủ Nhiệm Bộ Môn
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            About a head and two deputy head of department
+            Bao gồm 1 trưởng bộ môn và 2 phó trưởng bộ môn
           </Typography>
         </Box>
         <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -99,11 +99,11 @@ export default function StaffHead() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 4,
-                  border: head.title === 'Head of department' ? '1px solid' : undefined,
+                  border: head.title === 'Trưởng bộ môn' ? '1px solid' : undefined,
                   borderColor:
-                    head.title === 'Head of department' ? 'primary.main' : undefined,
+                    head.title === 'Trưởng bộ môn' ? 'primary.main' : undefined,
                   background:
-                    head.title === 'Head of department'
+                    head.title === 'Trưởng bộ môn'
                       ? 'linear-gradient(#033363, #021F3B)'
                       : undefined,
                   cursor: "pointer",
@@ -127,7 +127,7 @@ export default function StaffHead() {
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        color: head.title === 'Head of department' ? 'grey.100' : '',
+                        color: head.title === 'Trưởng bộ môn' ? 'grey.100' : '',
                       }}
                     >
                       <Typography component="h3" variant="h5">
@@ -145,7 +145,7 @@ export default function StaffHead() {
                           flexDirection: 'column',
                           justifyContent: 'space-between',
                           alignItems: 'center',
-                          color: head.title === 'Head of department' ? 'grey.100' : '',
+                          color: head.title === 'Trưởng bộ môn' ? 'grey.100' : '',
                           pt: 2,
                           gap: 1,
                           transition: 0.3,
@@ -164,7 +164,7 @@ export default function StaffHead() {
                           sx={{
                             display: 'flex',
                             alignItems: 'baseline',
-                            color: head.title === 'Head of department' ? 'grey.50' : undefined,
+                            color: head.title === 'Trưởng bộ môn' ? 'grey.50' : undefined,
                           }}
                         >
                           <Typography component="h3" variant="h6">
@@ -179,7 +179,7 @@ export default function StaffHead() {
                         alignItems: 'baseline',
                       }}
                     >
-                      <Link href="mailto:someone@example.com" sx={{ color: head.title === 'Head of department' ? 'grey.50' : undefined }}>{head.email}</Link>
+                      <Link href="mailto:someone@example.com" sx={{ color: head.title === 'Trưởng bộ môn' ? 'grey.50' : undefined }}>{head.email}</Link>
                     </Box>
                   </Box>
                   <Divider
@@ -204,7 +204,7 @@ export default function StaffHead() {
                           sx={{
                             width: 20,
                             color:
-                              head.title === 'Head of department'
+                              head.title === 'Trưởng bộ môn'
                                 ? 'primary.light'
                                 : 'primary.main',
                           }}
@@ -213,7 +213,7 @@ export default function StaffHead() {
                           variant="body1"
                           sx={{
                             color:
-                              head.title === 'Head of department' ? 'grey.200' : "",
+                              head.title === 'Trưởng bộ môn' ? 'grey.200' : "",
                           }}
                         >
                           {line}

@@ -14,7 +14,7 @@ import Image from 'next/image';
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
-      {'Bản quyền © '}
+      {'Bản quyền thiết kế © '}
       <Link href="https://wuubangdev.click/" target="_blank">wuubangdev&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
@@ -50,14 +50,14 @@ export default function Footer() {
             width={40}
             height={40}
           />
-          <Typography variant="h5" fontWeight={600} gutterBottom m={0} color="#FF5500">
+          <Typography variant="h5" fontWeight={600} gutterBottom m={0} color="#FF5500" textAlign="center">
             Bộ môn Tài nguyên Đất đai (LRD)
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.secondary" textAlign="center">
             Khoa Môi trường và Tài nguyên thiên nhiên, Đại học Cần Thơ
             Khu II, đường 3/2, phường Xuân Khánh, quận Ninh Kiều, thành phố Cần Thơ, Việt Nam
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1" color="text.secondary" textAlign="center">
             Facebook: <Link href='https://www.facebook.com/TaiNguyenDatDaiCTU' target="_blank">https://www.facebook.com/TaiNguyenDatDaiCTU</Link>
           </Typography>
           <Copyright />

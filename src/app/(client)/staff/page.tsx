@@ -7,7 +7,7 @@ import { Box, Divider } from "@mui/material";
 const ClientStaff = () => {
     const breadcrumb = [
         { title: "LRD", link: "/" },
-        { title: "Staffs", link: "#" },
+        { title: "Cán bộ", link: "#" },
     ]
     return (
         <Box
