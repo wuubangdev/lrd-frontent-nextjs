@@ -1,13 +1,13 @@
 
 import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
-import AcademyTabs from "@/components/client/client-academy/academy.tabs";
+import AlumniTabs from "@/components/client/alumni/alumni.tabs";
 import { Box } from "@mui/material";
 
 
-const ClientAcademy = () => {
+const ClientAlumni = () => {
     const breadcrumb = [
         { title: "Trang chủ", link: "/" },
-        { title: "Chương trình giảng dạy", link: "#" },
+        { title: "Người học", link: "#" },
     ]
     return (
         <Box
@@ -26,9 +26,9 @@ const ClientAcademy = () => {
                     breadcrumb={breadcrumb}
                 />
             </Box>
-            <AcademyTabs />
+            <AlumniTabs />
         </Box>
     )
 }
 
-export default ClientAcademy;
+export default ClientAlumni;
