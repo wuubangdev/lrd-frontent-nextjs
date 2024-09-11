@@ -10,7 +10,7 @@ const BrandStack = () => {
                 useFlexGap
                 sx={{
                     width: { xs: '100%', sm: '70%' },
-                    mt: { xs: 2, sm: 1 },
+                    mt: { xs: 4, sm: 1 },
                     mb: { xs: 2, sm: 4 },
                 }}
             >
@@ -41,6 +41,36 @@ const BrandStack = () => {
                                 'Tài Nguyên Đất Đai',
                                 1500,
                                 'Tài Nguyên',
+                                1500,
+                                '',
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            // style={{ fontSize: '1.2em', display: 'inline-block' }}
+                            repeat={Infinity}
+                        />
+                    </Typography>
+                    <Typography
+                        component="span"
+                        variant="h6"
+                        sx={{
+                            display: { xs: 'block', sm: "none" },
+                            fontSize: 'clamp(2.5rem, 10vw, 1.5rem)',
+                            color: (theme) =>
+                                theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                        }}
+                    >
+                        <TypeAnimation
+                            sequence={[
+                                'L',
+                                1500,
+                                'LR',
+                                1500,
+                                'LRD',
+                                1500,
+                                'LR',
+                                1500,
+                                'L',
                                 1500,
                                 '',
                             ]}

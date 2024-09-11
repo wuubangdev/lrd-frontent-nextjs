@@ -61,7 +61,7 @@ const ClientSlider = ({ images }: IProps) => {
                         key={index}
                         sx={{
                             position: "relative",
-                            height: { xs: 200, sm: 600 },
+                            height: { xs: 200, sm: 700 },
                         }}
                     >
                         <Image
@@ -69,9 +69,9 @@ const ClientSlider = ({ images }: IProps) => {
                             src={image}
                             sizes='100%'
                             fill
-                        // style={{
-                        //   objectFit: 'contain',
-                        // }}
+                            style={{
+                                objectFit: "cover",
+                            }}
                         />
                     </Box>
                 ))}
