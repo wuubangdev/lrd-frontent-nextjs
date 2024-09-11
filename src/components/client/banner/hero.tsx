@@ -3,8 +3,8 @@ import * as React from 'react';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import BrandStack from '@/components/client/hero/hero.brand.stack';
 import ClientSlider from '../slider/client.slider';
+import BrandStack from './hero.brand.stack';
 
 export default function Hero() {
 

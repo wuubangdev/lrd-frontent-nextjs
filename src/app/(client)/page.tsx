@@ -9,7 +9,7 @@ import QualityAssurance from '@/components/client/home/quality.assurance';
 import Admission from '@/components/client/home/admission.info';
 import AskQuestion from '@/components/client/home/ask.questions';
 import AUN from '@/components/client/home/aun.qa';
-import Hero from '@/components/client/hero/hero';
+import Hero from '@/components/client/banner/hero';
 
 export default function LandingPage() {
 
