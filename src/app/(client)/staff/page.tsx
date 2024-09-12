@@ -2,7 +2,12 @@ import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
 import StaffHead from "@/components/client/client-staff/staff.head";
 import SubStaff from "@/components/client/client-staff/staff.substaff";
 import ClientTableStaff from "@/components/client/client-staff/staff.table.client";
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
+
+export const metadata = {
+    title: 'Cán bộ',
+    description: 'Thông tin tổ chức cán bộ và nhân sự bộ môn',
+};
 
 const ClientStaff = () => {
     const breadcrumb = [

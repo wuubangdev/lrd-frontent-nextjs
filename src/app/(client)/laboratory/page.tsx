@@ -1,11 +1,13 @@
 
 import Breadcrumb from "@/components/breadcrumbs/breadcrumbs";
-import AcademyTabs from "@/components/client/client-academy/academy.tabs";
 import LabTabs from "@/components/client/client-lab/lab.tabs";
 import { Box } from "@mui/material";
+export const metadata = {
+    title: 'Cở sở vật chất',
+    description: 'Thông tin về cơ sở vật chất & phòng thí nghiệm',
+};
 
-
-const ClientAcademy = () => {
+const ClientLaboratory = () => {
     const breadcrumb = [
         { title: "Trang chủ", link: "/" },
         { title: "Phòng thí nghiệm", link: "#" },
@@ -32,4 +34,4 @@ const ClientAcademy = () => {
     )
 }
 
-export default ClientAcademy;
+export default ClientLaboratory;

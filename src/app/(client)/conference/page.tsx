@@ -4,7 +4,10 @@ import AcademyTabs from "@/components/client/client-academy/academy.tabs";
 import ConferenceContent from "@/components/client/conference/conference.content";
 import { Box } from "@mui/material";
 
-
+export const metadata = {
+    title: 'Hội thảo',
+    description: 'Thông tin hội thảo tổ chức',
+};
 const ClientAcademy = () => {
     const breadcrumb = [
         { title: "Trang chủ", link: "/" },
