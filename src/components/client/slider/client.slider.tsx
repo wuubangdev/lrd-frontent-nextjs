@@ -2,13 +2,10 @@
 import * as React from 'react';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import BrandStack from '@/components/client/hero/hero.brand.stack';
-
 
 interface IProps {
     images: string[];
